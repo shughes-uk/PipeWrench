@@ -17,4 +17,9 @@ jobs:
       - name: Setup steamcmd
         uses: CyberAndrii/setup-steamcmd@v1
       - run: npm run build
-      - run: bash ./scripts/dump_pz.sh
+      - run: bash ./scripts/install_pz.sh
+      - run: npx pwm-cli luapath=./pzserver/media/lua outDir=./
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v4
+        with:
+          add-paths: lua
