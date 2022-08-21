@@ -25,3 +25,5 @@ jobs:
         uses: peter-evans/create-pull-request@v4
         with:
           base: ${{ matrix.version }}
+          title: ${{ matrix.version }} latest
+          branch: bot/${{ matrix.version }}
