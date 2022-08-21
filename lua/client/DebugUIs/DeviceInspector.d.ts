@@ -23,8 +23,8 @@
  */
 
 /**  @noSelfInFile */
-/// <reference path="../../../reference.d.ts" />
-/// <reference path="../../../PipeWrench.d.ts" />
+/// <reference path="../../../lua.reference.partial.d.ts" />
+/// <reference path="../../../lua.api.partial.d.ts" />
 
 declare module '@asledgehammer/pipewrench' {
   export namespace lua.client.DebugUIs {
@@ -77,5 +77,5 @@ declare module '@asledgehammer/pipewrench' {
       static onMouseButtonUp: (_object: any, _x: any, _y: any) => any;
     }
   }
-  export namespace lua.client.DebugUIs.DeviceInspector { }
+  export namespace lua.client.DebugUIs.DeviceInspector {}
 }

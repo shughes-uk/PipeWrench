@@ -23,8 +23,8 @@
  */
 
 /**  @noSelfInFile */
-/// <reference path="../../../reference.d.ts" />
-/// <reference path="../../../PipeWrench.d.ts" />
+/// <reference path="../../../lua.reference.partial.d.ts" />
+/// <reference path="../../../lua.api.partial.d.ts" />
 
 declare module '@asledgehammer/pipewrench' {
   export namespace lua.shared.Util {
@@ -71,5 +71,5 @@ declare module '@asledgehammer/pipewrench' {
       static privTrySquareWindow: (src: any, test: any) => any;
     }
   }
-  export namespace lua.shared.Util.AdjacentFreeTileFinder { }
+  export namespace lua.shared.Util.AdjacentFreeTileFinder {}
 }

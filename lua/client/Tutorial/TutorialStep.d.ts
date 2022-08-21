@@ -23,13 +23,13 @@
  */
 
 /**  @noSelfInFile */
-/// <reference path="../../../reference.d.ts" />
-/// <reference path="../../../PipeWrench.d.ts" />
+/// <reference path="../../../lua.reference.partial.d.ts" />
+/// <reference path="../../../lua.api.partial.d.ts" />
 
 declare module '@asledgehammer/pipewrench' {
   export namespace lua.client.Tutorial {
     /** @customConstructor TutorialStep:new */
-    export class TutorialStep extends lua.shared.ISBaseObject {
+    export class TutorialStep extends lua.shared.ISBaseObject.ISBaseObject {
       [id: string]: any;
       static [id: string]: any;
 
@@ -39,18 +39,18 @@ declare module '@asledgehammer/pipewrench' {
 
       addMessage:
         | ((
-          text: any,
-          x: any,
-          y: any,
-          w: any,
-          h: any,
-          clickToSkip: any,
-          test: any,
-          focusx: any,
-          focusy: any,
-          focusw: any,
-          focush: any
-        ) => any)
+            text: any,
+            x: any,
+            y: any,
+            w: any,
+            h: any,
+            clickToSkip: any,
+            test: any,
+            focusx: any,
+            focusy: any,
+            focusw: any,
+            focush: any
+          ) => any)
         | any;
 
       begin: (() => any) | any;
@@ -66,5 +66,5 @@ declare module '@asledgehammer/pipewrench' {
       onClose: ((message: any) => any) | any;
     }
   }
-  export namespace lua.client.Tutorial.TutorialStep { }
+  export namespace lua.client.Tutorial.TutorialStep {}
 }

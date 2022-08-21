@@ -23,8 +23,8 @@
  */
 
 /**  @noSelfInFile */
-/// <reference path="../../../reference.d.ts" />
-/// <reference path="../../../PipeWrench.d.ts" />
+/// <reference path="../../../lua.reference.partial.d.ts" />
+/// <reference path="../../../lua.api.partial.d.ts" />
 
 declare module '@asledgehammer/pipewrench' {
   export namespace lua.client.Traps {
@@ -39,5 +39,5 @@ declare module '@asledgehammer/pipewrench' {
       static initObjectModData: (isoObject: any, trapDef: any, north: any, player: any) => any;
     }
   }
-  export namespace lua.client.Traps.CTrapSystem { }
+  export namespace lua.client.Traps.CTrapSystem {}
 }

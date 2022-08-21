@@ -23,8 +23,8 @@
  */
 
 /**  @noSelfInFile */
-/// <reference path="../../../reference.d.ts" />
-/// <reference path="../../../PipeWrench.d.ts" />
+/// <reference path="../../../lua.reference.partial.d.ts" />
+/// <reference path="../../../lua.api.partial.d.ts" />
 
 declare module '@asledgehammer/pipewrench' {
   export namespace lua.server.BuildingObjects {
@@ -56,5 +56,5 @@ declare module '@asledgehammer/pipewrench' {
       setInfo: ((square: any, north: any, sprite: any) => any) | any;
     }
   }
-  export namespace lua.server.BuildingObjects.ISDoubleTileFurniture { }
+  export namespace lua.server.BuildingObjects.ISDoubleTileFurniture {}
 }

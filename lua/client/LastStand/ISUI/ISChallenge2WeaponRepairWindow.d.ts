@@ -23,8 +23,8 @@
  */
 
 /**  @noSelfInFile */
-/// <reference path="../../../../reference.d.ts" />
-/// <reference path="../../../../PipeWrench.d.ts" />
+/// <reference path="../../../../lua.reference.partial.d.ts" />
+/// <reference path="../../../../lua.api.partial.d.ts" />
 
 declare module '@asledgehammer/pipewrench' {
   export namespace lua.client.LastStand.ISUI {
@@ -52,5 +52,5 @@ declare module '@asledgehammer/pipewrench' {
       render: (() => any) | any;
     }
   }
-  export namespace lua.client.LastStand.ISUI.ISChallenge2WeaponRepairWindow { }
+  export namespace lua.client.LastStand.ISUI.ISChallenge2WeaponRepairWindow {}
 }
