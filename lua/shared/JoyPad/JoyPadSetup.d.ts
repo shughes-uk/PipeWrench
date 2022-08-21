@@ -23,13 +23,13 @@
  */
 
 /**  @noSelfInFile */
-/// <reference path="../../../reference.d.ts" />
-/// <reference path="../../../PipeWrench.d.ts" />
+/// <reference path="../../../lua.reference.partial.d.ts" />
+/// <reference path="../../../lua.api.partial.d.ts" />
 
 declare module '@asledgehammer/pipewrench' {
   export namespace lua.shared.JoyPad {
     /** @customConstructor JoypadControllerData:new */
-    export class JoypadControllerData extends lua.shared.ISBaseObject {
+    export class JoypadControllerData extends lua.shared.ISBaseObject.ISBaseObject {
       [id: string]: any;
       static [id: string]: any;
 
@@ -77,7 +77,7 @@ declare module '@asledgehammer/pipewrench' {
     }
 
     /** @customConstructor JoypadData:new */
-    export class JoypadData extends lua.shared.ISBaseObject {
+    export class JoypadData extends lua.shared.ISBaseObject.ISBaseObject {
       [id: string]: any;
       static [id: string]: any;
 
@@ -174,5 +174,5 @@ declare module '@asledgehammer/pipewrench' {
       static useKeyboardMouse: () => any;
     }
   }
-  export namespace lua.shared.JoyPad.JoyPadSetup { }
+  export namespace lua.shared.JoyPad.JoyPadSetup {}
 }

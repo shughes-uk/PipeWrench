@@ -23,8 +23,8 @@
  */
 
 /**  @noSelfInFile */
-/// <reference path="../../../../reference.d.ts" />
-/// <reference path="../../../../PipeWrench.d.ts" />
+/// <reference path="../../../../lua.reference.partial.d.ts" />
+/// <reference path="../../../../lua.api.partial.d.ts" />
 
 declare module '@asledgehammer/pipewrench' {
   export namespace lua.client.Vehicles.TimedActions {
@@ -56,5 +56,5 @@ declare module '@asledgehammer/pipewrench' {
       setOnFail: ((func: any, arg1: any, arg2: any, arg3: any, arg4: any) => any) | any;
     }
   }
-  export namespace lua.client.Vehicles.TimedActions.ISPathFindAction { }
+  export namespace lua.client.Vehicles.TimedActions.ISPathFindAction {}
 }

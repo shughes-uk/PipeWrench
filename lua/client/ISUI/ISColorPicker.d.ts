@@ -23,8 +23,8 @@
  */
 
 /**  @noSelfInFile */
-/// <reference path="../../../reference.d.ts" />
-/// <reference path="../../../PipeWrench.d.ts" />
+/// <reference path="../../../lua.reference.partial.d.ts" />
+/// <reference path="../../../lua.api.partial.d.ts" />
 
 declare module '@asledgehammer/pipewrench' {
   export namespace lua.client.ISUI {
@@ -70,5 +70,5 @@ declare module '@asledgehammer/pipewrench' {
       setPickedFunc: ((func: any, arg1: any, arg2: any, arg3: any, arg4: any) => any) | any;
     }
   }
-  export namespace lua.client.ISUI.ISColorPicker { }
+  export namespace lua.client.ISUI.ISColorPicker {}
 }

@@ -23,8 +23,8 @@
  */
 
 /**  @noSelfInFile */
-/// <reference path="../../../../../reference.d.ts" />
-/// <reference path="../../../../../PipeWrench.d.ts" />
+/// <reference path="../../../../../lua.reference.partial.d.ts" />
+/// <reference path="../../../../../lua.api.partial.d.ts" />
 
 declare module '@asledgehammer/pipewrench' {
   export namespace lua.client.DebugUIs.DebugMenu.Climate {
@@ -99,14 +99,14 @@ declare module '@asledgehammer/pipewrench' {
 
       registerVariable:
         | ((
-          _variable: any,
-          _title: any,
-          _isValue: any,
-          _javaInstance: any,
-          _defaultVal: any,
-          _color: any,
-          _postfix: any
-        ) => any)
+            _variable: any,
+            _title: any,
+            _isValue: any,
+            _javaInstance: any,
+            _defaultVal: any,
+            _color: any,
+            _postfix: any
+          ) => any)
         | any;
 
       stayOnSplitScreen: (() => any) | any;
@@ -122,5 +122,5 @@ declare module '@asledgehammer/pipewrench' {
       static OnOpenPanel: () => any;
     }
   }
-  export namespace lua.client.DebugUIs.DebugMenu.Climate.PlayerClimateDebug { }
+  export namespace lua.client.DebugUIs.DebugMenu.Climate.PlayerClimateDebug {}
 }

@@ -23,13 +23,13 @@
  */
 
 /**  @noSelfInFile */
-/// <reference path="../../../reference.d.ts" />
-/// <reference path="../../../PipeWrench.d.ts" />
+/// <reference path="../../../lua.reference.partial.d.ts" />
+/// <reference path="../../../lua.api.partial.d.ts" />
 
 declare module '@asledgehammer/pipewrench' {
   export namespace lua.client.TimedActions {
     /** @customConstructor ISTimedActionQueue:new */
-    export class ISTimedActionQueue extends lua.shared.ISBaseObject {
+    export class ISTimedActionQueue extends lua.shared.ISBaseObject.ISBaseObject {
       [id: string]: any;
       static [id: string]: any;
 
@@ -93,5 +93,5 @@ declare module '@asledgehammer/pipewrench' {
       ) => any;
     }
   }
-  export namespace lua.client.TimedActions.ISTimedActionQueue { }
+  export namespace lua.client.TimedActions.ISTimedActionQueue {}
 }

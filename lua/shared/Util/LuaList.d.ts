@@ -23,13 +23,13 @@
  */
 
 /**  @noSelfInFile */
-/// <reference path="../../../reference.d.ts" />
-/// <reference path="../../../PipeWrench.d.ts" />
+/// <reference path="../../../lua.reference.partial.d.ts" />
+/// <reference path="../../../lua.api.partial.d.ts" />
 
 declare module '@asledgehammer/pipewrench' {
   export namespace lua.shared.Util {
     /** @customConstructor LuaList:new */
-    export class LuaList extends lua.shared.ISBaseObject {
+    export class LuaList extends lua.shared.ISBaseObject.ISBaseObject {
       [id: string]: any;
       static [id: string]: any;
 
@@ -66,5 +66,5 @@ declare module '@asledgehammer/pipewrench' {
       sort: ((f: any) => any) | any;
     }
   }
-  export namespace lua.shared.Util.LuaList { }
+  export namespace lua.shared.Util.LuaList {}
 }

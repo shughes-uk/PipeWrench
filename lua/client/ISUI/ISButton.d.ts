@@ -23,8 +23,8 @@
  */
 
 /**  @noSelfInFile */
-/// <reference path="../../../reference.d.ts" />
-/// <reference path="../../../PipeWrench.d.ts" />
+/// <reference path="../../../lua.reference.partial.d.ts" />
+/// <reference path="../../../lua.api.partial.d.ts" />
 
 declare module '@asledgehammer/pipewrench' {
   export namespace lua.client.ISUI {
@@ -176,5 +176,5 @@ declare module '@asledgehammer/pipewrench' {
       updateTooltip: (() => any) | any;
     }
   }
-  export namespace lua.client.ISUI.ISButton { }
+  export namespace lua.client.ISUI.ISButton {}
 }

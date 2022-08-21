@@ -23,8 +23,8 @@
  */
 
 /**  @noSelfInFile */
-/// <reference path="../../../../reference.d.ts" />
-/// <reference path="../../../../PipeWrench.d.ts" />
+/// <reference path="../../../../lua.reference.partial.d.ts" />
+/// <reference path="../../../../lua.api.partial.d.ts" />
 
 declare module '@asledgehammer/pipewrench' {
   export namespace lua.client.DebugUIs.DebugChunkState {
@@ -47,7 +47,7 @@ declare module '@asledgehammer/pipewrench' {
     }
 
     /** @customConstructor DebugChunkStateUI_Tool:new */
-    export class DebugChunkStateUI_Tool extends lua.shared.ISBaseObject {
+    export class DebugChunkStateUI_Tool extends lua.shared.ISBaseObject.ISBaseObject {
       [id: string]: any;
       static [id: string]: any;
 
@@ -68,5 +68,5 @@ declare module '@asledgehammer/pipewrench' {
       onMouseUp: ((x: any, y: any) => any) | any;
     }
   }
-  export namespace lua.client.DebugUIs.DebugChunkState.DebugChunkState_Tools { }
+  export namespace lua.client.DebugUIs.DebugChunkState.DebugChunkState_Tools {}
 }

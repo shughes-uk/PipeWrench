@@ -23,8 +23,8 @@
  */
 
 /**  @noSelfInFile */
-/// <reference path="../../../../reference.d.ts" />
-/// <reference path="../../../../PipeWrench.d.ts" />
+/// <reference path="../../../../lua.reference.partial.d.ts" />
+/// <reference path="../../../../lua.api.partial.d.ts" />
 
 declare module '@asledgehammer/pipewrench' {
   export namespace lua.client.Vehicles.ISUI {
@@ -74,5 +74,5 @@ declare module '@asledgehammer/pipewrench' {
       updateButtons: (() => any) | any;
     }
   }
-  export namespace lua.client.Vehicles.ISUI.ISVehicleACUI { }
+  export namespace lua.client.Vehicles.ISUI.ISVehicleACUI {}
 }

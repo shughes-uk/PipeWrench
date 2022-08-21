@@ -23,8 +23,8 @@
  */
 
 /**  @noSelfInFile */
-/// <reference path="../../../reference.d.ts" />
-/// <reference path="../../../PipeWrench.d.ts" />
+/// <reference path="../../../lua.reference.partial.d.ts" />
+/// <reference path="../../../lua.api.partial.d.ts" />
 
 declare module '@asledgehammer/pipewrench' {
   export namespace lua.client.OptionScreens {
@@ -99,5 +99,5 @@ declare module '@asledgehammer/pipewrench' {
       static newGame: (player: any, square: any) => any;
     }
   }
-  export namespace lua.client.OptionScreens.LastStandPlayerSelect { }
+  export namespace lua.client.OptionScreens.LastStandPlayerSelect {}
 }

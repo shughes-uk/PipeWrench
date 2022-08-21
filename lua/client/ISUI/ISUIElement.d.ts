@@ -23,13 +23,13 @@
  */
 
 /**  @noSelfInFile */
-/// <reference path="../../../reference.d.ts" />
-/// <reference path="../../../PipeWrench.d.ts" />
+/// <reference path="../../../lua.reference.partial.d.ts" />
+/// <reference path="../../../lua.api.partial.d.ts" />
 
 declare module '@asledgehammer/pipewrench' {
   export namespace lua.client.ISUI {
     /** @customConstructor ISUIElement:new */
-    export class ISUIElement extends lua.shared.ISBaseObject {
+    export class ISUIElement extends lua.shared.ISBaseObject.ISBaseObject {
       [id: string]: any;
       static [id: string]: any;
 
@@ -141,20 +141,20 @@ declare module '@asledgehammer/pipewrench' {
 
       drawTextureAllPoint:
         | ((
-          texture: any,
-          tlx: any,
-          tly: any,
-          trx: any,
-          _try_: any,
-          brx: any,
-          bry: any,
-          blx: any,
-          bly: any,
-          r: any,
-          g: any,
-          b: any,
-          a: any
-        ) => any)
+            texture: any,
+            tlx: any,
+            tly: any,
+            trx: any,
+            _try_: any,
+            brx: any,
+            bry: any,
+            blx: any,
+            bly: any,
+            r: any,
+            g: any,
+            b: any,
+            a: any
+          ) => any)
         | any;
 
       DrawTextureAngle: ((tex: any, centerX: any, centerY: any, angle: any) => any) | any;
@@ -394,5 +394,5 @@ declare module '@asledgehammer/pipewrench' {
       wrapInCollapsableWindow: ((title: any, resizable: any, subClass: any) => any) | any;
     }
   }
-  export namespace lua.client.ISUI.ISUIElement { }
+  export namespace lua.client.ISUI.ISUIElement {}
 }

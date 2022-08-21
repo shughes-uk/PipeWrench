@@ -23,8 +23,8 @@
  */
 
 /**  @noSelfInFile */
-/// <reference path="../../../../reference.d.ts" />
-/// <reference path="../../../../PipeWrench.d.ts" />
+/// <reference path="../../../../lua.reference.partial.d.ts" />
+/// <reference path="../../../../lua.api.partial.d.ts" />
 
 declare module '@asledgehammer/pipewrench' {
   export namespace lua.client.Blacksmith.TimedActions {
@@ -44,5 +44,5 @@ declare module '@asledgehammer/pipewrench' {
       constructor(character: any, plank: any, stickOrBranch: any, furnace: any, time: any);
     }
   }
-  export namespace lua.client.Blacksmith.TimedActions.ISFurnaceLightFromKindle { }
+  export namespace lua.client.Blacksmith.TimedActions.ISFurnaceLightFromKindle {}
 }

@@ -23,8 +23,8 @@
  */
 
 /**  @noSelfInFile */
-/// <reference path="../../../reference.d.ts" />
-/// <reference path="../../../PipeWrench.d.ts" />
+/// <reference path="../../../lua.reference.partial.d.ts" />
+/// <reference path="../../../lua.api.partial.d.ts" />
 
 declare module '@asledgehammer/pipewrench' {
   export namespace lua.client.Moveables {
@@ -157,14 +157,14 @@ declare module '@asledgehammer/pipewrench' {
 
       pickUpMoveableInternal:
         | ((
-          _character: any,
-          _square: any,
-          _object: any,
-          _sprInstance: any,
-          _spriteName: any,
-          _createItem: any,
-          _rotating: any
-        ) => any)
+            _character: any,
+            _square: any,
+            _object: any,
+            _sprInstance: any,
+            _spriteName: any,
+            _createItem: any,
+            _rotating: any
+          ) => any)
         | any;
 
       pickUpMoveableViaCursor: ((_character: any, _square: any, _origSpriteName: any, _moveCursor: any) => any) | any;
@@ -191,14 +191,14 @@ declare module '@asledgehammer/pipewrench' {
 
       scrapObjectInternal:
         | ((
-          _character: any,
-          _scrapDef: any,
-          _square: any,
-          _object: any,
-          _scrapResult: any,
-          _chance: any,
-          _perkName: any
-        ) => any)
+            _character: any,
+            _scrapDef: any,
+            _square: any,
+            _object: any,
+            _scrapResult: any,
+            _chance: any,
+            _perkName: any
+          ) => any)
         | any;
 
       scrapObjectViaCursor: ((_character: any, _square: any, _origSpriteName: any, _moveCursor: any) => any) | any;
@@ -263,5 +263,5 @@ declare module '@asledgehammer/pipewrench' {
       static [id: string]: any;
     }
   }
-  export namespace lua.client.Moveables.ISMoveableSpriteProps { }
+  export namespace lua.client.Moveables.ISMoveableSpriteProps {}
 }

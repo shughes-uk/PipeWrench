@@ -23,13 +23,13 @@
  */
 
 /**  @noSelfInFile */
-/// <reference path="../../../reference.d.ts" />
-/// <reference path="../../../PipeWrench.d.ts" />
+/// <reference path="../../../lua.reference.partial.d.ts" />
+/// <reference path="../../../lua.api.partial.d.ts" />
 
 declare module '@asledgehammer/pipewrench' {
   export namespace lua.client.ISUI {
     /** @customConstructor ISLightSourceRadialMenu:new */
-    export class ISLightSourceRadialMenu extends lua.shared.ISBaseObject {
+    export class ISLightSourceRadialMenu extends lua.shared.ISBaseObject.ISBaseObject {
       [id: string]: any;
       static [id: string]: any;
 
@@ -76,5 +76,5 @@ declare module '@asledgehammer/pipewrench' {
       static onKeyRepeat: (key: any) => any;
     }
   }
-  export namespace lua.client.ISUI.ISLightSourceRadialMenu { }
+  export namespace lua.client.ISUI.ISLightSourceRadialMenu {}
 }
