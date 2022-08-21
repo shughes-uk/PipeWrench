@@ -23,7 +23,7 @@
  */
 
 /** @noSelfInFile */
-/// <reference path="reference.partial.d.ts" />
+/// <reference path="lua.api.partial.d.ts" />
 
 declare module '@asledgehammer/pipewrench' {
   // [PARTIAL:START]
@@ -426,7 +426,6 @@ declare module '@asledgehammer/pipewrench' {
   // [lua/client/DebugUIs/DebugMenu/Climate/ThermoDebug.d.ts]
   /** @customConstructor ThermoDebug:new */
   export class ThermoDebug extends lua.client.DebugUIs.DebugMenu.Climate.ThermoDebug {}
-  export abstract class ThermoDebug extends lua.client.DebugUIs.DebugMenu.Climate.ThermoDebug {}
 
   // [lua/client/DebugUIs/DebugMenu/Climate/ThunderDebug.d.ts]
   /** @customConstructor ThunderDebug:new */
@@ -3246,14 +3245,13 @@ declare module '@asledgehammer/pipewrench' {
   export abstract class forageDefs extends lua.shared.Foraging.forageDefs {}
   export abstract class forageSkills extends lua.shared.Foraging.forageSkills {}
   export abstract class forageZones extends lua.shared.Foraging.forageZones {}
-  export abstract class scavenges extends lua.shared.Foraging.scavenges {}
 
   // [lua/shared/Foraging/forageSystem.d.ts]
   export abstract class forageSystem extends lua.shared.Foraging.forageSystem {}
 
   // [lua/shared/ISBaseObject.d.ts]
   /** @customConstructor ISBaseObject:new */
-  export class ISBaseObject extends lua.shared.ISBaseObject.ISBaseObject {}
+  export class ISBaseObject extends lua.shared.ISBaseObject {}
 
   // [lua/shared/iwbumstempmodelcompat.d.ts]
   /** @noSelf */
@@ -3265,7 +3263,7 @@ declare module '@asledgehammer/pipewrench' {
   /** @customConstructor JoypadData:new */
   export class JoypadData extends lua.shared.JoyPad.JoypadData {}
   export abstract class joypad extends lua.shared.JoyPad.joypad {}
-  export abstract class Joypad extends lua.shared.JoyPad.Joypad {}
+
   export abstract class JoypadState extends lua.shared.JoyPad.JoypadState {}
 
   // [lua/shared/keyBinding.d.ts]
