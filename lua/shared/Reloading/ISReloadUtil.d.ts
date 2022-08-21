@@ -29,7 +29,7 @@
 declare module '@asledgehammer/pipewrench' {
   export namespace lua.shared.Reloading {
     /** @customConstructor ISReloadUtil:new */
-    export class ISReloadUtil extends lua.shared.ISBaseObject.ISBaseObject {
+    export class ISReloadUtil extends lua.shared.ISBaseObject {
       [id: string]: any;
       static [id: string]: any;
 

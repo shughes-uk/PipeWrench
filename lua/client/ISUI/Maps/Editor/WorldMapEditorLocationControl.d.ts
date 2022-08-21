@@ -29,7 +29,7 @@
 declare module '@asledgehammer/pipewrench' {
   export namespace lua.client.ISUI.Maps.Editor {
     /** @customConstructor WorldMapEditorLocationControl:new */
-    export class WorldMapEditorLocationControl extends lua.shared.ISBaseObject.ISBaseObject {
+    export class WorldMapEditorLocationControl extends lua.shared.ISBaseObject {
       [id: string]: any;
       static [id: string]: any;
 

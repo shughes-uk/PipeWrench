@@ -29,7 +29,7 @@
 declare module '@asledgehammer/pipewrench' {
   export namespace lua.server.Map {
     /** @customConstructor SGlobalObject:new */
-    export class SGlobalObject extends lua.shared.ISBaseObject.ISBaseObject {
+    export class SGlobalObject extends lua.shared.ISBaseObject {
       [id: string]: any;
       static [id: string]: any;
 

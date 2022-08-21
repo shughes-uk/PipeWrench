@@ -29,7 +29,7 @@
 declare module '@asledgehammer/pipewrench' {
   export namespace lua.client.TimedActions {
     /** @customConstructor ISTimedActionQueue:new */
-    export class ISTimedActionQueue extends lua.shared.ISBaseObject.ISBaseObject {
+    export class ISTimedActionQueue extends lua.shared.ISBaseObject {
       [id: string]: any;
       static [id: string]: any;
 

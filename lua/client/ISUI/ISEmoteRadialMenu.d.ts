@@ -29,7 +29,7 @@
 declare module '@asledgehammer/pipewrench' {
   export namespace lua.client.ISUI {
     /** @customConstructor ISEmoteRadialMenu:new */
-    export class ISEmoteRadialMenu extends lua.shared.ISBaseObject.ISBaseObject {
+    export class ISEmoteRadialMenu extends lua.shared.ISBaseObject {
       [id: string]: any;
       static [id: string]: any;
 

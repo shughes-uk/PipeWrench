@@ -29,7 +29,7 @@
 declare module '@asledgehammer/pipewrench' {
   export namespace lua.shared.Util {
     /** @customConstructor LuaList:new */
-    export class LuaList extends lua.shared.ISBaseObject.ISBaseObject {
+    export class LuaList extends lua.shared.ISBaseObject {
       [id: string]: any;
       static [id: string]: any;
 

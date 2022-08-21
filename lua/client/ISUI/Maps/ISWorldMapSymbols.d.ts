@@ -164,7 +164,7 @@ declare module '@asledgehammer/pipewrench' {
     }
 
     /** @customConstructor ISWorldMapSymbolTool:new */
-    export class ISWorldMapSymbolTool extends lua.shared.ISBaseObject.ISBaseObject {
+    export class ISWorldMapSymbolTool extends lua.shared.ISBaseObject {
       [id: string]: any;
       static [id: string]: any;
 

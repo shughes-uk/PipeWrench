@@ -29,7 +29,7 @@
 declare module '@asledgehammer/pipewrench' {
   export namespace lua.server.Movers {
     /** @customConstructor ISBaseMover:new */
-    export class ISBaseMover extends lua.shared.ISBaseObject.ISBaseObject {
+    export class ISBaseMover extends lua.shared.ISBaseObject {
       [id: string]: any;
       static [id: string]: any;
 

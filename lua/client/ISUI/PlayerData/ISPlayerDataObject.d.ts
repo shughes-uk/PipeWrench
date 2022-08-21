@@ -29,7 +29,7 @@
 declare module '@asledgehammer/pipewrench' {
   export namespace lua.client.ISUI.PlayerData {
     /** @customConstructor ISPlayerDataObject:new */
-    export class ISPlayerDataObject extends lua.shared.ISBaseObject.ISBaseObject {
+    export class ISPlayerDataObject extends lua.shared.ISBaseObject {
       [id: string]: any;
       static [id: string]: any;
 
