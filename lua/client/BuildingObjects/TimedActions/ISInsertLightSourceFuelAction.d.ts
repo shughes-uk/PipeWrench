@@ -23,8 +23,8 @@
  */
 
 /**  @noSelfInFile */
-/// <reference path="../../../../reference.d.ts" />
-/// <reference path="../../../../PipeWrench.d.ts" />
+/// <reference path="../../../../lua.reference.partial.d.ts" />
+/// <reference path="../../../../lua.api.partial.d.ts" />
 
 declare module '@asledgehammer/pipewrench' {
   export namespace lua.client.BuildingObjects.TimedActions {
@@ -40,5 +40,5 @@ declare module '@asledgehammer/pipewrench' {
       constructor(character: any, lightSource: any, fuel: any, time: any);
     }
   }
-  export namespace lua.client.BuildingObjects.TimedActions.ISInsertLightSourceFuelAction { }
+  export namespace lua.client.BuildingObjects.TimedActions.ISInsertLightSourceFuelAction {}
 }

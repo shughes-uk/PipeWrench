@@ -23,8 +23,8 @@
  */
 
 /**  @noSelfInFile */
-/// <reference path="../../../../reference.d.ts" />
-/// <reference path="../../../../PipeWrench.d.ts" />
+/// <reference path="../../../../lua.reference.partial.d.ts" />
+/// <reference path="../../../../lua.api.partial.d.ts" />
 
 declare module '@asledgehammer/pipewrench' {
   export namespace lua.client.Farming.TimedActions {
@@ -42,5 +42,5 @@ declare module '@asledgehammer/pipewrench' {
       constructor(character: any, item: any, uses: any, plant: any, time: any);
     }
   }
-  export namespace lua.client.Farming.TimedActions.ISCureMildewAction { }
+  export namespace lua.client.Farming.TimedActions.ISCureMildewAction {}
 }

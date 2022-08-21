@@ -23,8 +23,8 @@
  */
 
 /**  @noSelfInFile */
-/// <reference path="../../../../../reference.d.ts" />
-/// <reference path="../../../../../PipeWrench.d.ts" />
+/// <reference path="../../../../../lua.reference.partial.d.ts" />
+/// <reference path="../../../../../lua.api.partial.d.ts" />
 
 declare module '@asledgehammer/pipewrench' {
   export namespace lua.client.DebugUIs.DebugMenu.Base {
@@ -63,5 +63,5 @@ declare module '@asledgehammer/pipewrench' {
       static OnOpenPanel: (_class: any, _x: any, _y: any, _w: any, _h: any, _title: any) => any;
     }
   }
-  export namespace lua.client.DebugUIs.DebugMenu.Base.ISDebugPanelBase { }
+  export namespace lua.client.DebugUIs.DebugMenu.Base.ISDebugPanelBase {}
 }

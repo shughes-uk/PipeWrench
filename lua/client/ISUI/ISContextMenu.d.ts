@@ -23,8 +23,8 @@
  */
 
 /**  @noSelfInFile */
-/// <reference path="../../../reference.d.ts" />
-/// <reference path="../../../PipeWrench.d.ts" />
+/// <reference path="../../../lua.reference.partial.d.ts" />
+/// <reference path="../../../lua.api.partial.d.ts" />
 
 declare module '@asledgehammer/pipewrench' {
   export namespace lua.client.ISUI {
@@ -103,95 +103,95 @@ declare module '@asledgehammer/pipewrench' {
 
       addActionsOption:
         | ((
-          text: any,
-          getActionsFunction: any,
-          arg1: any,
-          arg2: any,
-          arg3: any,
-          arg4: any,
-          arg5: any,
-          arg6: any,
-          arg7: any,
-          arg8: any,
-          arg9: any,
-          arg10: any
-        ) => any)
+            text: any,
+            getActionsFunction: any,
+            arg1: any,
+            arg2: any,
+            arg3: any,
+            arg4: any,
+            arg5: any,
+            arg6: any,
+            arg7: any,
+            arg8: any,
+            arg9: any,
+            arg10: any
+          ) => any)
         | any;
 
       addDebugOption:
         | ((
-          name: any,
-          target: any,
-          onSelect: any,
-          param1: any,
-          param2: any,
-          param3: any,
-          param4: any,
-          param5: any,
-          param6: any,
-          param7: any,
-          param8: any,
-          param9: any,
-          param10: any
-        ) => any)
+            name: any,
+            target: any,
+            onSelect: any,
+            param1: any,
+            param2: any,
+            param3: any,
+            param4: any,
+            param5: any,
+            param6: any,
+            param7: any,
+            param8: any,
+            param9: any,
+            param10: any
+          ) => any)
         | any;
 
       addDefaultOptions: (() => any) | any;
 
       addOption:
         | ((
-          name: any,
-          target: any,
-          onSelect: any,
-          param1: any,
-          param2: any,
-          param3: any,
-          param4: any,
-          param5: any,
-          param6: any,
-          param7: any,
-          param8: any,
-          param9: any,
-          param10: any
-        ) => any)
+            name: any,
+            target: any,
+            onSelect: any,
+            param1: any,
+            param2: any,
+            param3: any,
+            param4: any,
+            param5: any,
+            param6: any,
+            param7: any,
+            param8: any,
+            param9: any,
+            param10: any
+          ) => any)
         | any;
 
       addOptionOnTop:
         | ((
-          name: any,
-          target: any,
-          onSelect: any,
-          param1: any,
-          param2: any,
-          param3: any,
-          param4: any,
-          param5: any,
-          param6: any,
-          param7: any,
-          param8: any,
-          param9: any,
-          param10: any
-        ) => any)
+            name: any,
+            target: any,
+            onSelect: any,
+            param1: any,
+            param2: any,
+            param3: any,
+            param4: any,
+            param5: any,
+            param6: any,
+            param7: any,
+            param8: any,
+            param9: any,
+            param10: any
+          ) => any)
         | any;
 
       addSubMenu: ((option: any, menu: any) => any) | any;
 
       allocOption:
         | ((
-          name: any,
-          target: any,
-          onSelect: any,
-          param1: any,
-          param2: any,
-          param3: any,
-          param4: any,
-          param5: any,
-          param6: any,
-          param7: any,
-          param8: any,
-          param9: any,
-          param10: any
-        ) => any)
+            name: any,
+            target: any,
+            onSelect: any,
+            param1: any,
+            param2: any,
+            param3: any,
+            param4: any,
+            param5: any,
+            param6: any,
+            param7: any,
+            param8: any,
+            param9: any,
+            param10: any
+          ) => any)
         | any;
 
       calcHeight: (() => any) | any;
@@ -240,40 +240,40 @@ declare module '@asledgehammer/pipewrench' {
 
       insertOptionAfter:
         | ((
-          prevOptionName: any,
-          name: any,
-          target: any,
-          onSelect: any,
-          param1: any,
-          param2: any,
-          param3: any,
-          param4: any,
-          param5: any,
-          param6: any,
-          param7: any,
-          param8: any,
-          param9: any,
-          param10: any
-        ) => any)
+            prevOptionName: any,
+            name: any,
+            target: any,
+            onSelect: any,
+            param1: any,
+            param2: any,
+            param3: any,
+            param4: any,
+            param5: any,
+            param6: any,
+            param7: any,
+            param8: any,
+            param9: any,
+            param10: any
+          ) => any)
         | any;
 
       insertOptionBefore:
         | ((
-          nextOptionName: any,
-          name: any,
-          target: any,
-          onSelect: any,
-          param1: any,
-          param2: any,
-          param3: any,
-          param4: any,
-          param5: any,
-          param6: any,
-          param7: any,
-          param8: any,
-          param9: any,
-          param10: any
-        ) => any)
+            nextOptionName: any,
+            name: any,
+            target: any,
+            onSelect: any,
+            param1: any,
+            param2: any,
+            param3: any,
+            param4: any,
+            param5: any,
+            param6: any,
+            param7: any,
+            param8: any,
+            param9: any,
+            param10: any
+          ) => any)
         | any;
 
       isAnyVisible: (() => any) | any;
@@ -331,5 +331,5 @@ declare module '@asledgehammer/pipewrench' {
       static noise: (msg: any) => any;
     }
   }
-  export namespace lua.client.ISUI.ISContextMenu { }
+  export namespace lua.client.ISUI.ISContextMenu {}
 }

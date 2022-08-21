@@ -23,8 +23,8 @@
  */
 
 /**  @noSelfInFile */
-/// <reference path="../../../../reference.d.ts" />
-/// <reference path="../../../../PipeWrench.d.ts" />
+/// <reference path="../../../../lua.reference.partial.d.ts" />
+/// <reference path="../../../../lua.api.partial.d.ts" />
 
 declare module '@asledgehammer/pipewrench' {
   export namespace lua.client.ISUI.BodyParts {
@@ -113,12 +113,12 @@ declare module '@asledgehammer/pipewrench' {
 
       setAlphas:
         | ((
-          _defaultAlpha: any,
-          _nodeAlpha: any,
-          _selectedAlpha: any,
-          _deselectedAlpha: any,
-          _backgroundAlpha: any
-        ) => any)
+            _defaultAlpha: any,
+            _nodeAlpha: any,
+            _selectedAlpha: any,
+            _deselectedAlpha: any,
+            _backgroundAlpha: any
+          ) => any)
         | any;
 
       setColorForValue: ((_val: any, _color: any) => any) | any;
@@ -136,5 +136,5 @@ declare module '@asledgehammer/pipewrench' {
       setValue: ((_bodyPartType: any, _value: any, _force: any) => any) | any;
     }
   }
-  export namespace lua.client.ISUI.BodyParts.ISBodyPartPanel { }
+  export namespace lua.client.ISUI.BodyParts.ISBodyPartPanel {}
 }

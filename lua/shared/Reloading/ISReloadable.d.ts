@@ -23,13 +23,13 @@
  */
 
 /**  @noSelfInFile */
-/// <reference path="../../../reference.d.ts" />
-/// <reference path="../../../PipeWrench.d.ts" />
+/// <reference path="../../../lua.reference.partial.d.ts" />
+/// <reference path="../../../lua.api.partial.d.ts" />
 
 declare module '@asledgehammer/pipewrench' {
   export namespace lua.shared.Reloading {
     /** @customConstructor ISReloadable:new */
-    export class ISReloadable extends lua.shared.ISBaseObject {
+    export class ISReloadable extends lua.shared.ISBaseObject.ISBaseObject {
       [id: string]: any;
       static [id: string]: any;
 
@@ -92,5 +92,5 @@ declare module '@asledgehammer/pipewrench' {
       syncReloadableToItem: ((item: any) => any) | any;
     }
   }
-  export namespace lua.shared.Reloading.ISReloadable { }
+  export namespace lua.shared.Reloading.ISReloadable {}
 }

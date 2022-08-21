@@ -23,13 +23,13 @@
  */
 
 /**  @noSelfInFile */
-/// <reference path="../../../reference.d.ts" />
-/// <reference path="../../../PipeWrench.d.ts" />
+/// <reference path="../../../lua.reference.partial.d.ts" />
+/// <reference path="../../../lua.api.partial.d.ts" />
 
 declare module '@asledgehammer/pipewrench' {
   export namespace lua.shared.Reloading {
     /** @customConstructor ISReloadManager:new */
-    export class ISReloadManager extends lua.shared.ISBaseObject {
+    export class ISReloadManager extends lua.shared.ISBaseObject.ISBaseObject {
       [id: string]: any;
       static [id: string]: any;
 
@@ -116,5 +116,5 @@ declare module '@asledgehammer/pipewrench' {
       static startReloadHook: (pl: any) => any;
     }
   }
-  export namespace lua.shared.Reloading.ISReloadManager { }
+  export namespace lua.shared.Reloading.ISReloadManager {}
 }

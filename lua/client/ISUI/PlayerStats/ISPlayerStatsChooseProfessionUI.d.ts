@@ -23,8 +23,8 @@
  */
 
 /**  @noSelfInFile */
-/// <reference path="../../../../reference.d.ts" />
-/// <reference path="../../../../PipeWrench.d.ts" />
+/// <reference path="../../../../lua.reference.partial.d.ts" />
+/// <reference path="../../../../lua.api.partial.d.ts" />
 
 declare module '@asledgehammer/pipewrench' {
   export namespace lua.client.ISUI.PlayerStats {
@@ -64,5 +64,5 @@ declare module '@asledgehammer/pipewrench' {
       setVisible: ((visible: any) => any) | any;
     }
   }
-  export namespace lua.client.ISUI.PlayerStats.ISPlayerStatsChooseProfessionUI { }
+  export namespace lua.client.ISUI.PlayerStats.ISPlayerStatsChooseProfessionUI {}
 }

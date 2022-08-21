@@ -23,8 +23,8 @@
  */
 
 /**  @noSelfInFile */
-/// <reference path="../../../reference.d.ts" />
-/// <reference path="../../../PipeWrench.d.ts" />
+/// <reference path="../../../lua.reference.partial.d.ts" />
+/// <reference path="../../../lua.api.partial.d.ts" />
 
 declare module '@asledgehammer/pipewrench' {
   export namespace lua.client.ISUI {
@@ -83,17 +83,17 @@ declare module '@asledgehammer/pipewrench' {
 
       insertNewLineOfButtons:
         | ((
-          button1: any,
-          button2: any,
-          button3: any,
-          button4: any,
-          button5: any,
-          button6: any,
-          button7: any,
-          button8: any,
-          button9: any,
-          button10: any
-        ) => any)
+            button1: any,
+            button2: any,
+            button3: any,
+            button4: any,
+            button5: any,
+            button6: any,
+            button7: any,
+            button8: any,
+            button9: any,
+            button10: any
+          ) => any)
         | any;
 
       insertNewListOfButtons: ((list: any) => any) | any;
@@ -119,5 +119,5 @@ declare module '@asledgehammer/pipewrench' {
       setJoypadFocus: ((child: any, joypadData: any) => any) | any;
     }
   }
-  export namespace lua.client.ISUI.ISPanelJoypad { }
+  export namespace lua.client.ISUI.ISPanelJoypad {}
 }
