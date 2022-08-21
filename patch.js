@@ -17,7 +17,7 @@ function patch_fmod_fmod() {
 function patch_pipewrench() {
     console.log("Patching PipeWrench.d.ts ...")
     try {
-        const file = path.join(__dirname, "PipeWrench.d.ts")
+        const file = path.join(__dirname, "lua.api.partial.d.ts")
         let content = fs.readFileSync(file, 'utf-8')
 
         content = content.replace(`// [server/recipecode.d.ts]`, ``)
