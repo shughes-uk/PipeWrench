@@ -21,8 +21,8 @@ jobs:
       - run: npm run build
       - run: bash ./scripts/install_pz.sh ${{ matrix.version }}
       - run: npx pwm-cli luapath=./pzserver/media/lua outDir=.
-      - run: npx prettier --write .
       - run: npm patch
+      - run: npx prettier --write .
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v4
         with:

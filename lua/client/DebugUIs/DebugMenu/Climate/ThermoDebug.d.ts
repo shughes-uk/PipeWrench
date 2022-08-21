@@ -78,8 +78,6 @@ declare module '@asledgehammer/pipewrench' {
       /** @noSelf */
       static OnOpenPanel: () => any;
     }
-
-
   }
   export namespace lua.client.DebugUIs.DebugMenu.Climate.ThermoDebug {}
 }
