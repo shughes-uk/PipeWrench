@@ -23,8 +23,8 @@
  */
 
 /**  @noSelfInFile */
-/// <reference path="../../../reference.d.ts" />
-/// <reference path="../../../PipeWrench.d.ts" />
+/// <reference path="../../../lua.reference.partial.d.ts" />
+/// <reference path="../../../lua.api.partial.d.ts" />
 
 declare module '@asledgehammer/pipewrench' {
   export namespace lua.client.OptionScreens {
@@ -36,5 +36,5 @@ declare module '@asledgehammer/pipewrench' {
       constructor(x: any, y: any, width: any, height: any);
     }
   }
-  export namespace lua.client.OptionScreens.CoopCharacterCreationProfession { }
+  export namespace lua.client.OptionScreens.CoopCharacterCreationProfession {}
 }

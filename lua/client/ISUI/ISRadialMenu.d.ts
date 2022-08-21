@@ -23,8 +23,8 @@
  */
 
 /**  @noSelfInFile */
-/// <reference path="../../../reference.d.ts" />
-/// <reference path="../../../PipeWrench.d.ts" />
+/// <reference path="../../../lua.reference.partial.d.ts" />
+/// <reference path="../../../lua.api.partial.d.ts" />
 
 declare module '@asledgehammer/pipewrench' {
   export namespace lua.client.ISUI {
@@ -49,16 +49,16 @@ declare module '@asledgehammer/pipewrench' {
 
       addSlice:
         | ((
-          text: any,
-          texture: any,
-          command: any,
-          arg1: any,
-          arg2: any,
-          arg3: any,
-          arg4: any,
-          arg5: any,
-          arg6: any
-        ) => any)
+            text: any,
+            texture: any,
+            command: any,
+            arg1: any,
+            arg2: any,
+            arg3: any,
+            arg4: any,
+            arg5: any,
+            arg6: any
+          ) => any)
         | any;
 
       center: (() => any) | any;
@@ -84,5 +84,5 @@ declare module '@asledgehammer/pipewrench' {
       undisplay: (() => any) | any;
     }
   }
-  export namespace lua.client.ISUI.ISRadialMenu { }
+  export namespace lua.client.ISUI.ISRadialMenu {}
 }

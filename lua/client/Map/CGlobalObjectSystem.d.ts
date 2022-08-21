@@ -23,13 +23,13 @@
  */
 
 /**  @noSelfInFile */
-/// <reference path="../../../reference.d.ts" />
-/// <reference path="../../../PipeWrench.d.ts" />
+/// <reference path="../../../lua.reference.partial.d.ts" />
+/// <reference path="../../../lua.api.partial.d.ts" />
 
 declare module '@asledgehammer/pipewrench' {
   export namespace lua.client.Map {
     /** @customConstructor CGlobalObjectSystem:new */
-    export class CGlobalObjectSystem extends lua.shared.ISBaseObject {
+    export class CGlobalObjectSystem extends lua.shared.ISBaseObject.ISBaseObject {
       [id: string]: any;
       static [id: string]: any;
 
@@ -79,5 +79,5 @@ declare module '@asledgehammer/pipewrench' {
       static RegisterSystemClass: (luaClass: any) => any;
     }
   }
-  export namespace lua.client.Map.CGlobalObjectSystem { }
+  export namespace lua.client.Map.CGlobalObjectSystem {}
 }

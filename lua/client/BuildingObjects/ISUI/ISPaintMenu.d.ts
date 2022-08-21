@@ -23,8 +23,8 @@
  */
 
 /**  @noSelfInFile */
-/// <reference path="../../../../reference.d.ts" />
-/// <reference path="../../../../PipeWrench.d.ts" />
+/// <reference path="../../../../lua.reference.partial.d.ts" />
+/// <reference path="../../../../lua.api.partial.d.ts" />
 
 declare module '@asledgehammer/pipewrench' {
   export namespace lua.client.BuildingObjects.ISUI {
@@ -47,5 +47,5 @@ declare module '@asledgehammer/pipewrench' {
       static onPlaster: (worldobjects: any, player: any, thumpable: any, square: any) => any;
     }
   }
-  export namespace lua.client.BuildingObjects.ISUI.ISPaintMenu { }
+  export namespace lua.client.BuildingObjects.ISUI.ISPaintMenu {}
 }

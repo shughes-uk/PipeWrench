@@ -23,13 +23,13 @@
  */
 
 /**  @noSelfInFile */
-/// <reference path="../../../reference.d.ts" />
-/// <reference path="../../../PipeWrench.d.ts" />
+/// <reference path="../../../lua.reference.partial.d.ts" />
+/// <reference path="../../../lua.api.partial.d.ts" />
 
 declare module '@asledgehammer/pipewrench' {
   export namespace lua.client.SurvivalGuide {
     /** @customConstructor ISTutorialPageInfo:new */
-    export class ISTutorialPageInfo extends lua.shared.ISBaseObject {
+    export class ISTutorialPageInfo extends lua.shared.ISBaseObject.ISBaseObject {
       [id: string]: any;
       static [id: string]: any;
 
@@ -47,7 +47,7 @@ declare module '@asledgehammer/pipewrench' {
     }
 
     /** @customConstructor ISTutorialSetInfo:new */
-    export class ISTutorialSetInfo extends lua.shared.ISBaseObject {
+    export class ISTutorialSetInfo extends lua.shared.ISBaseObject.ISBaseObject {
       [id: string]: any;
       static [id: string]: any;
 
@@ -72,5 +72,5 @@ declare module '@asledgehammer/pipewrench' {
       update: ((tutorialPanel: any) => any) | any;
     }
   }
-  export namespace lua.client.SurvivalGuide.ISTutorialPageInfo { }
+  export namespace lua.client.SurvivalGuide.ISTutorialPageInfo {}
 }

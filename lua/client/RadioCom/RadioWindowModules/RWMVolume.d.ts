@@ -23,8 +23,8 @@
  */
 
 /**  @noSelfInFile */
-/// <reference path="../../../../reference.d.ts" />
-/// <reference path="../../../../PipeWrench.d.ts" />
+/// <reference path="../../../../lua.reference.partial.d.ts" />
+/// <reference path="../../../../lua.api.partial.d.ts" />
 
 declare module '@asledgehammer/pipewrench' {
   export namespace lua.client.RadioCom.RadioWindowModules {
@@ -80,5 +80,5 @@ declare module '@asledgehammer/pipewrench' {
       verifyItem: ((_item: any) => any) | any;
     }
   }
-  export namespace lua.client.RadioCom.RadioWindowModules.RWMVolume { }
+  export namespace lua.client.RadioCom.RadioWindowModules.RWMVolume {}
 }

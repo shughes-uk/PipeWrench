@@ -23,8 +23,8 @@
  */
 
 /**  @noSelfInFile */
-/// <reference path="../../../../reference.d.ts" />
-/// <reference path="../../../../PipeWrench.d.ts" />
+/// <reference path="../../../../lua.reference.partial.d.ts" />
+/// <reference path="../../../../lua.api.partial.d.ts" />
 
 declare module '@asledgehammer/pipewrench' {
   export namespace lua.client.RadioCom.ISUIRadio {
@@ -71,15 +71,15 @@ declare module '@asledgehammer/pipewrench' {
 
       setWaveParameters:
         | ((
-          _minLen: any,
-          _maxLen: any,
-          _minHeight: any,
-          _maxHeight: any,
-          _minUpdFreq: any,
-          _maxUpdFreq: any,
-          _minScrollSpeed: any,
-          _maxScrollSpeed: any
-        ) => any)
+            _minLen: any,
+            _maxLen: any,
+            _minHeight: any,
+            _maxHeight: any,
+            _minUpdFreq: any,
+            _maxUpdFreq: any,
+            _minScrollSpeed: any,
+            _maxScrollSpeed: any
+          ) => any)
         | any;
 
       toggleOn: ((_b: any) => any) | any;
@@ -87,5 +87,5 @@ declare module '@asledgehammer/pipewrench' {
       update: (() => any) | any;
     }
   }
-  export namespace lua.client.RadioCom.ISUIRadio.ISSineWaveDisplay { }
+  export namespace lua.client.RadioCom.ISUIRadio.ISSineWaveDisplay {}
 }

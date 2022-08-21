@@ -23,8 +23,8 @@
  */
 
 /**  @noSelfInFile */
-/// <reference path="../../../../reference.d.ts" />
-/// <reference path="../../../../PipeWrench.d.ts" />
+/// <reference path="../../../../lua.reference.partial.d.ts" />
+/// <reference path="../../../../lua.api.partial.d.ts" />
 
 declare module '@asledgehammer/pipewrench' {
   export namespace lua.client.Fishing.TimedActions {
@@ -83,5 +83,5 @@ declare module '@asledgehammer/pipewrench' {
       static getFishingZoneFixed: (x: any, y: any, z: any) => any;
     }
   }
-  export namespace lua.client.Fishing.TimedActions.ISFishingAction { }
+  export namespace lua.client.Fishing.TimedActions.ISFishingAction {}
 }

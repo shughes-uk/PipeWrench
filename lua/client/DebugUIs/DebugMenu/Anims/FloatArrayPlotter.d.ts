@@ -23,8 +23,8 @@
  */
 
 /**  @noSelfInFile */
-/// <reference path="../../../../../reference.d.ts" />
-/// <reference path="../../../../../PipeWrench.d.ts" />
+/// <reference path="../../../../../lua.reference.partial.d.ts" />
+/// <reference path="../../../../../lua.api.partial.d.ts" />
 
 declare module '@asledgehammer/pipewrench' {
   export namespace lua.client.DebugUIs.DebugMenu.Anims {
@@ -68,5 +68,5 @@ declare module '@asledgehammer/pipewrench' {
       update: (() => any) | any;
     }
   }
-  export namespace lua.client.DebugUIs.DebugMenu.Anims.FloatArrayPlotter { }
+  export namespace lua.client.DebugUIs.DebugMenu.Anims.FloatArrayPlotter {}
 }

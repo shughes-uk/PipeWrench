@@ -23,8 +23,8 @@
  */
 
 /**  @noSelfInFile */
-/// <reference path="../../../reference.d.ts" />
-/// <reference path="../../../PipeWrench.d.ts" />
+/// <reference path="../../../lua.reference.partial.d.ts" />
+/// <reference path="../../../lua.api.partial.d.ts" />
 
 declare module '@asledgehammer/pipewrench' {
   export namespace lua.client.ISUI {
@@ -56,5 +56,5 @@ declare module '@asledgehammer/pipewrench' {
       addCombo: ((name: any, options: any, selected: any, target: any, onchange: any) => any) | any;
     }
   }
-  export namespace lua.client.ISUI.ISOptionPanel { }
+  export namespace lua.client.ISUI.ISOptionPanel {}
 }

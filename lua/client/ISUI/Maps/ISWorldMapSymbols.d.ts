@@ -23,8 +23,8 @@
  */
 
 /**  @noSelfInFile */
-/// <reference path="../../../../reference.d.ts" />
-/// <reference path="../../../../PipeWrench.d.ts" />
+/// <reference path="../../../../lua.reference.partial.d.ts" />
+/// <reference path="../../../../lua.api.partial.d.ts" />
 
 declare module '@asledgehammer/pipewrench' {
   export namespace lua.client.ISUI.Maps {
@@ -164,7 +164,7 @@ declare module '@asledgehammer/pipewrench' {
     }
 
     /** @customConstructor ISWorldMapSymbolTool:new */
-    export class ISWorldMapSymbolTool extends lua.shared.ISBaseObject {
+    export class ISWorldMapSymbolTool extends lua.shared.ISBaseObject.ISBaseObject {
       [id: string]: any;
       static [id: string]: any;
 
@@ -283,5 +283,5 @@ declare module '@asledgehammer/pipewrench' {
       removeAnnotation: (() => any) | any;
     }
   }
-  export namespace lua.client.ISUI.Maps.ISWorldMapSymbols { }
+  export namespace lua.client.ISUI.Maps.ISWorldMapSymbols {}
 }

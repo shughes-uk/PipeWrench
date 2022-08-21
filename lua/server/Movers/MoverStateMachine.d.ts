@@ -23,13 +23,13 @@
  */
 
 /**  @noSelfInFile */
-/// <reference path="../../../reference.d.ts" />
-/// <reference path="../../../PipeWrench.d.ts" />
+/// <reference path="../../../lua.reference.partial.d.ts" />
+/// <reference path="../../../lua.api.partial.d.ts" />
 
 declare module '@asledgehammer/pipewrench' {
   export namespace lua.server.Movers {
     /** @customConstructor ISMoverStateMachine:new */
-    export class ISMoverStateMachine extends lua.shared.ISBaseObject {
+    export class ISMoverStateMachine extends lua.shared.ISBaseObject.ISBaseObject {
       [id: string]: any;
       static [id: string]: any;
 
@@ -50,5 +50,5 @@ declare module '@asledgehammer/pipewrench' {
       update: (() => any) | any;
     }
   }
-  export namespace lua.server.Movers.MoverStateMachine { }
+  export namespace lua.server.Movers.MoverStateMachine {}
 }
