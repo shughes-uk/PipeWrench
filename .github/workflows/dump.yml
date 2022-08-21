@@ -21,5 +21,3 @@ jobs:
       - run: npx pwm-cli luapath=./pzserver/media/lua outDir=.
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v4
-        with:
-          add-paths: "* lua"
