@@ -23,8 +23,8 @@
  */
 
 /**  @noSelfInFile */
-/// <reference path="../../../reference.d.ts" />
-/// <reference path="../../../PipeWrench.d.ts" />
+/// <reference path="../../../lua.reference.partial.d.ts" />
+/// <reference path="../../../lua.api.partial.d.ts" />
 
 declare module '@asledgehammer/pipewrench' {
   export namespace lua.client.OptionScreens {
@@ -69,15 +69,15 @@ declare module '@asledgehammer/pipewrench' {
 
       connect:
         | ((
-          previousScreen: any,
-          serverName: any,
-          userName: any,
-          password: any,
-          IP: any,
-          localIP: any,
-          port: any,
-          serverPassword: any
-        ) => any)
+            previousScreen: any,
+            serverName: any,
+            userName: any,
+            password: any,
+            IP: any,
+            localIP: any,
+            port: any,
+            serverPassword: any
+          ) => any)
         | any;
 
       connectCoop: ((previousScreen: any, serverSteamID: any) => any) | any;
@@ -99,5 +99,5 @@ declare module '@asledgehammer/pipewrench' {
       render: (() => any) | any;
     }
   }
-  export namespace lua.client.OptionScreens.ConnectToServer { }
+  export namespace lua.client.OptionScreens.ConnectToServer {}
 }

@@ -23,8 +23,8 @@
  */
 
 /**  @noSelfInFile */
-/// <reference path="../../../reference.d.ts" />
-/// <reference path="../../../PipeWrench.d.ts" />
+/// <reference path="../../../lua.reference.partial.d.ts" />
+/// <reference path="../../../lua.api.partial.d.ts" />
 
 declare module '@asledgehammer/pipewrench' {
   export namespace lua.client.Chat {
@@ -210,5 +210,5 @@ declare module '@asledgehammer/pipewrench' {
       static unfocusEvent: () => any;
     }
   }
-  export namespace lua.client.Chat.ISChat { }
+  export namespace lua.client.Chat.ISChat {}
 }

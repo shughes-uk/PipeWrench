@@ -23,8 +23,8 @@
  */
 
 /**  @noSelfInFile */
-/// <reference path="../../../reference.d.ts" />
-/// <reference path="../../../PipeWrench.d.ts" />
+/// <reference path="../../../lua.reference.partial.d.ts" />
+/// <reference path="../../../lua.api.partial.d.ts" />
 
 declare module '@asledgehammer/pipewrench' {
   export namespace lua.shared.NPCs {
@@ -71,5 +71,5 @@ declare module '@asledgehammer/pipewrench' {
       static SetTraitDescription: (trait: any) => any;
     }
   }
-  export namespace lua.shared.NPCs.MainCreationMethods { }
+  export namespace lua.shared.NPCs.MainCreationMethods {}
 }

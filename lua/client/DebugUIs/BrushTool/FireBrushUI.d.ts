@@ -23,8 +23,8 @@
  */
 
 /**  @noSelfInFile */
-/// <reference path="../../../../reference.d.ts" />
-/// <reference path="../../../../PipeWrench.d.ts" />
+/// <reference path="../../../../lua.reference.partial.d.ts" />
+/// <reference path="../../../../lua.api.partial.d.ts" />
 
 declare module '@asledgehammer/pipewrench' {
   export namespace lua.client.DebugUIs.BrushTool {
@@ -91,5 +91,5 @@ declare module '@asledgehammer/pipewrench' {
       static openPanel: (x: any, y: any, playerObj: any) => any;
     }
   }
-  export namespace lua.client.DebugUIs.BrushTool.FireBrushUI { }
+  export namespace lua.client.DebugUIs.BrushTool.FireBrushUI {}
 }

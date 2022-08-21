@@ -23,8 +23,8 @@
  */
 
 /**  @noSelfInFile */
-/// <reference path="../../../reference.d.ts" />
-/// <reference path="../../../PipeWrench.d.ts" />
+/// <reference path="../../../lua.reference.partial.d.ts" />
+/// <reference path="../../../lua.api.partial.d.ts" />
 
 declare module '@asledgehammer/pipewrench' {
   export namespace lua.shared.Logs {
@@ -53,5 +53,5 @@ declare module '@asledgehammer/pipewrench' {
       static writeLog: (_character: any, _packet: any) => any;
     }
   }
-  export namespace lua.shared.Logs.ISLogSystem { }
+  export namespace lua.shared.Logs.ISLogSystem {}
 }

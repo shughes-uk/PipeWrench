@@ -23,8 +23,8 @@
  */
 
 /**  @noSelfInFile */
-/// <reference path="../../../reference.d.ts" />
-/// <reference path="../../../PipeWrench.d.ts" />
+/// <reference path="../../../lua.reference.partial.d.ts" />
+/// <reference path="../../../lua.api.partial.d.ts" />
 
 declare module '@asledgehammer/pipewrench' {
   export namespace lua.client.Tutorial {
@@ -117,5 +117,5 @@ declare module '@asledgehammer/pipewrench' {
       static unlockDoor: (x: any, y: any, z: any) => any;
     }
   }
-  export namespace lua.client.Tutorial.Tutorial1 { }
+  export namespace lua.client.Tutorial.Tutorial1 {}
 }

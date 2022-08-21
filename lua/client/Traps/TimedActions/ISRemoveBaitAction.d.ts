@@ -23,8 +23,8 @@
  */
 
 /**  @noSelfInFile */
-/// <reference path="../../../../reference.d.ts" />
-/// <reference path="../../../../PipeWrench.d.ts" />
+/// <reference path="../../../../lua.reference.partial.d.ts" />
+/// <reference path="../../../../lua.api.partial.d.ts" />
 
 declare module '@asledgehammer/pipewrench' {
   export namespace lua.client.Traps.TimedActions {
@@ -38,5 +38,5 @@ declare module '@asledgehammer/pipewrench' {
       constructor(character: any, trap: any, time: any);
     }
   }
-  export namespace lua.client.Traps.TimedActions.ISRemoveBaitAction { }
+  export namespace lua.client.Traps.TimedActions.ISRemoveBaitAction {}
 }

@@ -23,8 +23,8 @@
  */
 
 /**  @noSelfInFile */
-/// <reference path="../../../reference.d.ts" />
-/// <reference path="../../../PipeWrench.d.ts" />
+/// <reference path="../../../lua.reference.partial.d.ts" />
+/// <reference path="../../../lua.api.partial.d.ts" />
 
 declare module '@asledgehammer/pipewrench' {
   export namespace lua.server.FireFighting {
@@ -66,5 +66,5 @@ declare module '@asledgehammer/pipewrench' {
       isValidArea: ((x: any, y: any, z: any) => any) | any;
     }
   }
-  export namespace lua.server.FireFighting.ISExtinguishCursor { }
+  export namespace lua.server.FireFighting.ISExtinguishCursor {}
 }
