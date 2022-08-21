@@ -4,7 +4,8 @@
   "description": "",
   "scripts": {
     "patch": "node patch.js",
-    "build": "tsc"
+    "build": "tsc",
+    "extract": "pwm-cli luapath=./pzserver/media/lua outDir=. && npm run patch && npx prettier --write ."
   },
   "repository": {
     "type": "git",
