@@ -156,7 +156,6 @@ declare module '@asledgehammer/pipewrench' {
 
       /** @noSelf */
       static values(): zombie.iso.SpriteDetails.IsoFlagType[];
-
     }
     /** [ENUM] zombie.iso.SpriteDetails.IsoObjectType */
     export class IsoObjectType {
@@ -218,7 +217,6 @@ declare module '@asledgehammer/pipewrench' {
 
       /** @noSelf */
       static values(): zombie.iso.SpriteDetails.IsoObjectType[];
-
     }
   }
 }

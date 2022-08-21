@@ -37,23 +37,23 @@ declare module '@asledgehammer/pipewrench' {
       static readonly instance?: zombie.iso.sprite.shapers.WallShaperWhole;
 
       /**
-       * Constructors: 
+       * Constructors:
        *  - (Empty Constructor)
        */
       constructor();
       /**
-       * Method Parameters: 
+       * Method Parameters:
        *  - (TextureDraw arg0): void
        *  - (Object arg0): void
        */
       accept(arg0: any): void;
       /**
-       * Method Parameters: 
+       * Method Parameters:
        *  - (Consumer arg0): java.util._function_.Consumer<T>
        */
       andThen(arg0: java.util._function_.Consumer<any>): java.util._function_.Consumer<any>;
       /**
-       * Method Parameters: 
+       * Method Parameters:
        *  - (int arg0): void
        */
       setTintColor(arg0: number): void;
