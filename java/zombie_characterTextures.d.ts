@@ -115,9 +115,9 @@ declare module '@asledgehammer/pipewrench' {
       /**
        * @noSelf
        *
-       * (BloodBodyPartType arg0, HumanVisual arg1, ArrayList arg2, boolean arg3): boolean
+       * (BloodBodyPartType arg0, HumanVisual arg1, ArrayList arg2): void
        */
-      static addHole(arg0: zombie.characterTextures.BloodBodyPartType | null, arg1: zombie.core.skinnedmodel.visual.HumanVisual | null, arg2: java.util.ArrayList<zombie.core.skinnedmodel.visual.ItemVisual> | null, arg3: boolean): boolean;
+      static addHole(arg0: zombie.characterTextures.BloodBodyPartType | null, arg1: zombie.core.skinnedmodel.visual.HumanVisual | null, arg2: java.util.ArrayList<zombie.core.skinnedmodel.visual.ItemVisual> | null): void;
 
       /**
        * @noSelf
