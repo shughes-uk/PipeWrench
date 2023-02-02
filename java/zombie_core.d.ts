@@ -157,6 +157,11 @@ declare module '@asledgehammer/pipewrench' {
        * Method Parameters: 
        *  - (Empty): number
        */
+      getB(): number;
+      /**
+       * Method Parameters: 
+       *  - (Empty): number
+       */
       getBlue(): number;
       /**
        * Method Parameters: 
@@ -172,6 +177,11 @@ declare module '@asledgehammer/pipewrench' {
        * Method Parameters: 
        *  - (Empty): number
        */
+      getG(): number;
+      /**
+       * Method Parameters: 
+       *  - (Empty): number
+       */
       getGreen(): number;
       /**
        * Method Parameters: 
@@ -183,6 +193,11 @@ declare module '@asledgehammer/pipewrench' {
        *  - (Empty): number
        */
       getGreenFloat(): number;
+      /**
+       * Method Parameters: 
+       *  - (Empty): number
+       */
+      getR(): number;
       /**
        * Method Parameters: 
        *  - (Empty): number
@@ -707,6 +722,8 @@ declare module '@asledgehammer/pipewrench' {
       /** java.lang.String */
       static OptionContextMenuFont?: string;
       /** boolean */
+      static OptionDoContainerOutline: boolean;
+      /** boolean */
       static OptionDoDoorSpriteEffects: boolean;
       /** boolean */
       static OptionDoWindSpriteEffects: boolean;
@@ -988,6 +1005,11 @@ declare module '@asledgehammer/pipewrench' {
       getAutoZoom(arg0: number): boolean;
       /**
        * Method Parameters: 
+       *  - (Empty): zombie.core.textures.ColorInfo
+       */
+      getBadHighlitedColor(): zombie.core.textures.ColorInfo;
+      /**
+       * Method Parameters: 
        *  - (Empty): string
        */
       getBlinkingMoodle(): string;
@@ -1028,6 +1050,11 @@ declare module '@asledgehammer/pipewrench' {
       getGameVersion(): zombie.core.GameVersion;
       /**
        * Method Parameters: 
+       *  - (Empty): zombie.core.textures.ColorInfo
+       */
+      getGoodHighlitedColor(): zombie.core.textures.ColorInfo;
+      /**
+       * Method Parameters: 
        *  - (Empty): number
        */
       getIgnoreProneZombieRange(): number;
@@ -1046,6 +1073,26 @@ declare module '@asledgehammer/pipewrench' {
        *  - (Empty): java.util.Map<string, number>
        */
       getKeyMaps(): java.util.Map<string, number>;
+      /**
+       * Method Parameters: 
+       *  - (Empty): number
+       */
+      getMaxTextureSize(): number;
+      /**
+       * Method Parameters: 
+       *  - (int arg0): number
+       */
+      getMaxTextureSizeFromFlags(arg0: number): number;
+      /**
+       * Method Parameters: 
+       *  - (int arg0): number
+       */
+      getMaxTextureSizeFromOption(arg0: number): number;
+      /**
+       * Method Parameters: 
+       *  - (Empty): number
+       */
+      getMaxVehicleTextureSize(): number;
       /**
        * Method Parameters: 
        *  - (Empty): number
@@ -1129,6 +1176,11 @@ declare module '@asledgehammer/pipewrench' {
       getOptionAutoDrink(): boolean;
       /**
        * Method Parameters: 
+       *  - (Empty): boolean
+       */
+      getOptionAutoWalkContainer(): boolean;
+      /**
+       * Method Parameters: 
        *  - (Empty): number
        */
       getOptionBloodDecals(): number;
@@ -1187,6 +1239,11 @@ declare module '@asledgehammer/pipewrench' {
        *  - (Empty): boolean
        */
       getOptionDisplayAsCelsius(): boolean;
+      /**
+       * Method Parameters: 
+       *  - (Empty): boolean
+       */
+      getOptionDoContainerOutline(): boolean;
       /**
        * Method Parameters: 
        *  - (Empty): boolean
@@ -1252,6 +1309,16 @@ declare module '@asledgehammer/pipewrench' {
        *  - (Empty): number
        */
       getOptionMaxChatOpaque(): number;
+      /**
+       * Method Parameters: 
+       *  - (Empty): number
+       */
+      getOptionMaxTextureSize(): number;
+      /**
+       * Method Parameters: 
+       *  - (Empty): number
+       */
+      getOptionMaxVehicleTextureSize(): number;
       /**
        * Method Parameters: 
        *  - (Empty): string
@@ -1559,9 +1626,19 @@ declare module '@asledgehammer/pipewrench' {
       getSteamServerVersion(): string;
       /**
        * Method Parameters: 
+       *  - (Empty): number
+       */
+      getTermsOfServiceVersion(): number;
+      /**
+       * Method Parameters: 
        *  - (Empty): boolean
        */
       getUseShaders(): boolean;
+      /**
+       * Method Parameters: 
+       *  - (Empty): string
+       */
+      getVersion(): string;
       /**
        * Method Parameters: 
        *  - (Empty): string
@@ -1864,6 +1941,11 @@ declare module '@asledgehammer/pipewrench' {
       setAzerty(arg0: boolean): void;
       /**
        * Method Parameters: 
+       *  - (ColorInfo arg0): void
+       */
+      setBadHighlitedColor(arg0: zombie.core.textures.ColorInfo): void;
+      /**
+       * Method Parameters: 
        *  - (String arg0): void
        */
       setBlinkingMoodle(arg0: string): void;
@@ -1907,6 +1989,11 @@ declare module '@asledgehammer/pipewrench' {
        *  - (int arg0): void
        */
       setFramerate(arg0: number): void;
+      /**
+       * Method Parameters: 
+       *  - (ColorInfo arg0): void
+       */
+      setGoodHighlitedColor(arg0: zombie.core.textures.ColorInfo): void;
       /**
        * Method Parameters: 
        *  - (boolean arg0): void
@@ -1994,6 +2081,11 @@ declare module '@asledgehammer/pipewrench' {
       setOptionAutoProneAtk(arg0: boolean): void;
       /**
        * Method Parameters: 
+       *  - (boolean arg0): void
+       */
+      setOptionAutoWalkContainer(arg0: boolean): void;
+      /**
+       * Method Parameters: 
        *  - (int arg0): void
        */
       setOptionBloodDecals(arg0: number): void;
@@ -2052,6 +2144,11 @@ declare module '@asledgehammer/pipewrench' {
        *  - (boolean arg0): void
        */
       setOptionDisplayAsCelsius(arg0: boolean): void;
+      /**
+       * Method Parameters: 
+       *  - (boolean arg0): void
+       */
+      setOptionDoContainerOutline(arg0: boolean): void;
       /**
        * Method Parameters: 
        *  - (boolean arg0): void
@@ -2117,6 +2214,16 @@ declare module '@asledgehammer/pipewrench' {
        *  - (float arg0): void
        */
       setOptionMaxChatOpaque(arg0: number): void;
+      /**
+       * Method Parameters: 
+       *  - (int arg0): void
+       */
+      setOptionMaxTextureSize(arg0: number): void;
+      /**
+       * Method Parameters: 
+       *  - (int arg0): void
+       */
+      setOptionMaxVehicleTextureSize(arg0: number): void;
       /**
        * Method Parameters: 
        *  - (String arg0): void
@@ -2447,6 +2554,11 @@ declare module '@asledgehammer/pipewrench' {
        *  - (boolean arg0): void
        */
       setShowYourUsername(arg0: boolean): void;
+      /**
+       * Method Parameters: 
+       *  - (int arg0): void
+       */
+      setTermsOfServiceVersion(arg0: number): void;
       /**
        * Method Parameters: 
        *  - (boolean arg0): void

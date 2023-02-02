@@ -48,6 +48,7 @@ function Exports.canInviteFriends() return canInviteFriends() end
 function Exports.canModifyPlayerScoreboard() return canModifyPlayerScoreboard() end
 function Exports.canModifyPlayerStats() return canModifyPlayerStats() end
 function Exports.canSeePlayerStats() return canSeePlayerStats() end
+function Exports.checkModsNeedUpdate(arg1) return checkModsNeedUpdate(arg1) end
 function Exports.checkPlayerCanUseChat(arg1) return checkPlayerCanUseChat(arg1) end
 function Exports.checkSaveFileExists(arg1) return checkSaveFileExists(arg1) end
 function Exports.checkSaveFolderExists(arg1) return checkSaveFolderExists(arg1) end
@@ -56,6 +57,7 @@ function Exports.checkStringPattern(arg1) return checkStringPattern(arg1) end
 function Exports.cloneItemType(arg1,arg2) return cloneItemType(arg1,arg2) end
 function Exports.configureLighting(arg1) return configureLighting(arg1) end
 function Exports.connectToServerStateCallback(arg1) return connectToServerStateCallback(arg1) end
+function Exports.connectionManagerLog(arg1,arg2) return connectionManagerLog(arg1,arg2) end
 function Exports.copyTable(arg1,arg2) return copyTable(arg1,arg2) end
 function Exports.createHordeFromTo(arg1,arg2,arg3,arg4,arg5) return createHordeFromTo(arg1,arg2,arg3,arg4,arg5) end
 function Exports.createHordeInAreaTo(arg1,arg2,arg3,arg4,arg5,arg6,arg7) return createHordeInAreaTo(arg1,arg2,arg3,arg4,arg5,arg6,arg7) end
@@ -159,6 +161,7 @@ function Exports.getGameFilesInput(arg1) return getGameFilesInput(arg1) end
 function Exports.getGameFilesTextInput(arg1) return getGameFilesTextInput(arg1) end
 function Exports.getGameSpeed() return getGameSpeed() end
 function Exports.getGameTime() return getGameTime() end
+function Exports.getGameVersion() return getGameVersion() end
 function Exports.getGametimeTimestamp() return getGametimeTimestamp() end
 function Exports.getHairStylesInstance() return getHairStylesInstance() end
 function Exports.getHourMinute() return getHourMinute() end
@@ -194,6 +197,7 @@ function Exports.getLocalVarStack(arg1,arg2) return getLocalVarStack(arg1,arg2) 
 function Exports.getLotDirectories() return getLotDirectories() end
 function Exports.getLuaDebuggerErrorCount() return getLuaDebuggerErrorCount() end
 function Exports.getLuaDebuggerErrors() return getLuaDebuggerErrors() end
+function Exports.getMPStatus() return getMPStatus() end
 function Exports.getMapDirectoryTable() return getMapDirectoryTable() end
 function Exports.getMapFoldersForMod(arg1) return getMapFoldersForMod(arg1) end
 function Exports.getMapInfo(arg1) return getMapInfo(arg1) end
@@ -286,7 +290,6 @@ function Exports.getTextOrNull(arg1,arg2,arg3,arg4,arg5) return getTextOrNull(ar
 function Exports.getTexture(arg1) return getTexture(arg1) end
 function Exports.getTextureFromSaveDir(arg1,arg2) return getTextureFromSaveDir(arg1,arg2) end
 function Exports.getTickets(arg1) return getTickets(arg1) end
-function Exports.getMPStatus() return getMPStatus() end
 function Exports.getTimeInMillis() return getTimeInMillis() end
 function Exports.getTimestamp() return getTimestamp() end
 function Exports.getTimestampMs() return getTimestampMs() end
@@ -435,7 +438,7 @@ function Exports.sendSplint(arg1,arg2,arg3,arg4,arg5) return sendSplint(arg1,arg
 function Exports.sendStitch(arg1,arg2,arg3,arg4,arg5) return sendStitch(arg1,arg2,arg3,arg4,arg5) end
 function Exports.sendSwitchSeat(arg1,arg2,arg3,arg4) return sendSwitchSeat(arg1,arg2,arg3,arg4) end
 function Exports.sendVisual(arg1) return sendVisual(arg1) end
-function Exports.serverConnect(arg1,arg2,arg3,arg4,arg5,arg6,arg7) return serverConnect(arg1,arg2,arg3,arg4,arg5,arg6,arg7) end
+function Exports.serverConnect(arg1,arg2,arg3,arg4,arg5,arg6,arg7,arg8) return serverConnect(arg1,arg2,arg3,arg4,arg5,arg6,arg7,arg8) end
 function Exports.serverConnectCoop(arg1) return serverConnectCoop(arg1) end
 function Exports.serverFileExists(arg1) return serverFileExists(arg1) end
 function Exports.setActivePlayer(arg1) return setActivePlayer(arg1) end
@@ -655,7 +658,6 @@ Exports.ChatMode = loadstring("return _G['ChatMode']")()
 Exports.ChatSettings = loadstring("return _G['ChatSettings']")()
 Exports.ChatTab = loadstring("return _G['ChatTab']")()
 Exports.ChatType = loadstring("return _G['ChatType']")()
-Exports.CheckState = loadstring("return _G['CheckState']")()
 Exports.Checks = loadstring("return _G['Checks']")()
 Exports.ChecksumState = loadstring("return _G['ChecksumState']")()
 Exports.ChooseGameInfo = loadstring("return _G['ChooseGameInfo']")()
@@ -700,6 +702,7 @@ Exports.Colors = loadstring("return _G['Colors']")()
 Exports.ComboItem = loadstring("return _G['ComboItem']")()
 Exports.ConfigOption = loadstring("return _G['ConfigOption']")()
 Exports.ConnectToServerState = loadstring("return _G['ConnectToServerState']")()
+Exports.ConnectionType = loadstring("return _G['ConnectionType']")()
 Exports.Container = loadstring("return _G['Container']")()
 Exports.ContainerOverlays = loadstring("return _G['ContainerOverlays']")()
 Exports.Core = loadstring("return _G['Core']")()
@@ -848,6 +851,8 @@ Exports.IHumanVisual = loadstring("return _G['IHumanVisual']")()
 Exports.ILighting = loadstring("return _G['ILighting']")()
 Exports.IPathfinder = loadstring("return _G['IPathfinder']")()
 Exports.IPooledObject = loadstring("return _G['IPooledObject']")()
+Exports.IReplace = loadstring("return _G['IReplace']")()
+Exports.IReplaceProvider = loadstring("return _G['IReplaceProvider']")()
 Exports.IShaderProgramListener = loadstring("return _G['IShaderProgramListener']")()
 Exports.IStatePermissions = loadstring("return _G['IStatePermissions']")()
 Exports.ITexture = loadstring("return _G['ITexture']")()
@@ -1233,6 +1238,7 @@ Exports.Remove = loadstring("return _G['Remove']")()
 Exports.RenderArgs = loadstring("return _G['RenderArgs']")()
 Exports.RenderEffectType = loadstring("return _G['RenderEffectType']")()
 Exports.RenderSettings = loadstring("return _G['RenderSettings']")()
+Exports.ReplaceProviderCharacter = loadstring("return _G['ReplaceProviderCharacter']")()
 Exports.RequestState = loadstring("return _G['RequestState']")()
 Exports.RequiredSkill = loadstring("return _G['RequiredSkill']")()
 Exports.Result = loadstring("return _G['Result']")()
@@ -1331,7 +1337,9 @@ Exports.SwipeStatePlayer = loadstring("return _G['SwipeStatePlayer']")()
 Exports.SwitchSeat = loadstring("return _G['SwitchSeat']")()
 Exports.SystemDisabler = loadstring("return _G['SystemDisabler']")()
 Exports.Temperature = loadstring("return _G['Temperature']")()
+Exports.TemplateText = loadstring("return _G['TemplateText']")()
 Exports.TentAmbianceLogic = loadstring("return _G['TentAmbianceLogic']")()
+Exports.TermsOfServiceState = loadstring("return _G['TermsOfServiceState']")()
 Exports.TestResults = loadstring("return _G['TestResults']")()
 Exports.TextDrawHorizontal = loadstring("return _G['TextDrawHorizontal']")()
 Exports.TextDrawObject = loadstring("return _G['TextDrawObject']")()
@@ -1477,8 +1485,6 @@ Exports.WrappedBuffer = loadstring("return _G['WrappedBuffer']")()
 Exports.XP = loadstring("return _G['XP']")()
 Exports.XPMultiplier = loadstring("return _G['XPMultiplier']")()
 Exports.ZLogger = loadstring("return _G['ZLogger']")()
-Exports.ZNetFileAnnounce = loadstring("return _G['ZNetFileAnnounce']")()
-Exports.ZNetFileChunk = loadstring("return _G['ZNetFileChunk']")()
 Exports.ZNetStatistics = loadstring("return _G['ZNetStatistics']")()
 Exports.ZombieConfig = loadstring("return _G['ZombieConfig']")()
 Exports.ZombieFallDownState = loadstring("return _G['ZombieFallDownState']")()
@@ -2396,6 +2402,9 @@ Events.OnGameBoot.Add(function()
 
 --[lua/client/ISUI/ISTabPanel.d.ts]
   Exports.ISTabPanel = loadstring("return _G['ISTabPanel']")()
+
+--[lua/client/ISUI/ISTermsOfServiceUI.d.ts]
+  Exports.ISTermsOfServiceUI = loadstring("return _G['ISTermsOfServiceUI']")()
 
 --[lua/client/ISUI/ISTextBox.d.ts]
   Exports.ISTextBox = loadstring("return _G['ISTextBox']")()
@@ -3458,6 +3467,9 @@ Events.OnGameBoot.Add(function()
 
 --[lua/client/Vehicles/ISUI/ISVehicleSeatUI.d.ts]
   Exports.ISVehicleSeatUI = loadstring("return _G['ISVehicleSeatUI']")()
+  Exports.ImageScale = loadstring("return _G['ImageScale']")()
+  Exports.SeatOffsetX = loadstring("return _G['SeatOffsetX']")()
+  Exports.SeatOffsetY = loadstring("return _G['SeatOffsetY']")()
 
 --[lua/client/Vehicles/ISVehicleTrailerUtils.d.ts]
   Exports.ISVehicleTrailerUtils = loadstring("return _G['ISVehicleTrailerUtils']")()
