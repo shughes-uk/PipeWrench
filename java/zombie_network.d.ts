@@ -84,6 +84,8 @@ declare module '@asledgehammer/pipewrench' {
       /** byte */
       static readonly BD_splintItem: number;
       /** byte */
+      static readonly BD_stiffness: number;
+      /** byte */
       static readonly BD_stitchTime: number;
       /** byte */
       static readonly BD_stitched: number;
@@ -434,6 +436,8 @@ declare module '@asledgehammer/pipewrench' {
       static readonly IDToPlayerMap?: java.util.HashMap<number, zombie.characters.IsoPlayer>;
       /** gnu.trove.map.hash.TShortObjectHashMap<zombie.characters.IsoZombie> */
       static readonly IDToZombieMap?: gnu.trove.map.hash.TShortObjectHashMap<zombie.characters.IsoZombie>;
+      /** java.lang.String */
+      static ServerName?: string;
       /** float */
       static ServerPredictedAhead: number;
       /** boolean */
@@ -480,6 +484,10 @@ declare module '@asledgehammer/pipewrench' {
       static serverPassword?: string;
       /** java.util.Calendar */
       static startAuth?: java.util.Calendar;
+      /** long */
+      static steamID: number;
+      /** boolean */
+      static useSteamRelay: boolean;
       /** java.lang.String */
       static username?: string;
 
@@ -570,9 +578,9 @@ declare module '@asledgehammer/pipewrench' {
       disconnect(): void;
       /**
        * Method Parameters: 
-       *  - (String arg0, String arg1, String arg2, String arg3, String arg4, String arg5): void
+       *  - (String arg0, String arg1, String arg2, String arg3, String arg4, String arg5, String arg6, boolean arg7): void
        */
-      doConnect(arg0: string, arg1: string, arg2: string, arg3: string, arg4: string, arg5: string): void;
+      doConnect(arg0: string, arg1: string, arg2: string, arg3: string, arg4: string, arg5: string, arg6: string, arg7: boolean): void;
       /**
        * Method Parameters: 
        *  - (String arg0): void
@@ -830,11 +838,6 @@ declare module '@asledgehammer/pipewrench' {
       sendSplint(arg0: number, arg1: number, arg2: boolean, arg3: number, arg4: string): void;
       /**
        * Method Parameters: 
-       *  - (long arg0): void
-       */
-      sendSteamProfileName(arg0: number): void;
-      /**
-       * Method Parameters: 
        *  - (IsoGameCharacter arg0, IsoGameCharacter arg1, BodyPart arg2, InventoryItem arg3, boolean arg4): void
        */
       sendStitch(arg0: zombie.characters.IsoGameCharacter, arg1: zombie.characters.IsoGameCharacter, arg2: zombie.characters.BodyDamage.BodyPart, arg3: zombie.inventory.InventoryItem, arg4: boolean): void;
@@ -874,6 +877,11 @@ declare module '@asledgehammer/pipewrench' {
        *  - (int arg0, int arg1, boolean arg2): void
        */
       sendWoundInfection(arg0: number, arg1: number, arg2: boolean): void;
+      /**
+       * Method Parameters: 
+       *  - (RequestState arg0): void
+       */
+      setRequest(arg0: zombie.network.GameClient$RequestState): void;
       /**
        * Method Parameters: 
        *  - (int arg0): void
@@ -1395,6 +1403,71 @@ declare module '@asledgehammer/pipewrench' {
        */
       static setServerStatisticEnable(arg0: boolean): void;
     }
+    /** [ENUM] zombie.network.GameClient$RequestState */
+    export class GameClient$RequestState {
+      protected constructor();
+      static readonly Complete: zombie.network.GameClient$RequestState;
+      static readonly Loading: zombie.network.GameClient$RequestState;
+      static readonly Start: zombie.network.GameClient$RequestState;
+      name(): string;
+      ordinal(): number;
+      /**
+       * Method Parameters: 
+       *  - (Enum arg0): number
+       *  - (Object arg0): number
+       */
+      compareTo(arg0: any): number;
+      /**
+       * Method Parameters: 
+       *  - (Empty): java.util.Optional<java.lang.Enum$EnumDesc<E>>
+       */
+      describeConstable(): java.util.Optional<java.lang.Enum$EnumDesc<zombie.network.GameClient$RequestState>>;
+      /**
+       * Method Parameters: 
+       *  - (Object arg0): boolean
+       */
+      equals(arg0: any): boolean;
+      /**
+       * Method Parameters: 
+       *  - (Empty): java.lang.Class<E>
+       */
+      getDeclaringClass(): java.lang.Class<zombie.network.GameClient$RequestState>;
+      /**
+       * Method Parameters: 
+       *  - (Empty): number
+       */
+      hashCode(): number;
+      /**
+       * Method Parameters: 
+       *  - (Empty): string
+       */
+      name(): string;
+      /**
+       * Method Parameters: 
+       *  - (Empty): number
+       */
+      ordinal(): number;
+      /**
+       * Method Parameters: 
+       *  - (Empty): string
+       */
+      toString(): string;
+      /**
+       * @noSelf
+       *
+       * Method Parameters: 
+       *  - (String arg0): zombie.network.GameClient$RequestState
+       *  - (Class arg0, String arg1): T
+       */
+      static valueOf<T>(arg0: string | java.lang.Class<T>, arg1?: string): zombie.network.GameClient$RequestState | T;
+      /**
+       * @noSelf
+       *
+       * Method Parameters: 
+       *  - (Empty): zombie.network.GameClient$RequestState[]
+       */
+      static values(): zombie.network.GameClient$RequestState[];
+    }
     /**
      * @customConstructor NetworkAIParams.new
      * @
@@ -1407,18 +1480,16 @@ declare module '@asledgehammer/pipewrench' {
       static readonly CHARACTER_PREDICTION_INTERVAL_MS: number;
       /** int */
       static readonly CHARACTER_UPDATE_RATE_MS: number;
-      /** long */
-      static readonly CHECKSUM_VALIDATION_INTERVAL_MAX: number;
-      /** long */
-      static readonly CHECKSUM_VALIDATION_INTERVAL_MIN: number;
-      /** long */
-      static readonly CHECKSUM_VALIDATION_TIMEOUT: number;
       /** float */
       static readonly MAX_RECONNECT_DISTANCE_SQ: number;
       /** float */
       static readonly MAX_TOWING_CAR_DISTANCE_SQ: number;
       /** float */
       static readonly MAX_TOWING_TRAILER_DISTANCE_SQ: number;
+      /** long */
+      static readonly TIME_VALIDATION_DELAY: number;
+      /** long */
+      static readonly TIME_VALIDATION_INTERVAL: number;
       /** long */
       static readonly TIME_VALIDATION_TIMEOUT: number;
       /** float */
@@ -1440,6 +1511,8 @@ declare module '@asledgehammer/pipewrench' {
       /** int */
       static readonly ZOMBIE_MIN_UPDATE_INTERVAL_MS: number;
       /** int */
+      static readonly ZOMBIE_OWNERSHIP_INTERVAL: number;
+      /** int */
       static readonly ZOMBIE_REMOVE_INTERVAL_MS: number;
       /** int */
       static readonly ZOMBIE_TELEPORT_DISTANCE_SQ: number;
@@ -1460,6 +1533,48 @@ declare module '@asledgehammer/pipewrench' {
        *  - (Empty): void
        */
       static Init(): void;
+      /**
+       * @noSelf
+       *
+       * Method Parameters: 
+       *  - (Empty): boolean
+       */
+      static isShowConnectionInfo(): boolean;
+      /**
+       * @noSelf
+       *
+       * Method Parameters: 
+       *  - (Empty): boolean
+       */
+      static isShowPingInfo(): boolean;
+      /**
+       * @noSelf
+       *
+       * Method Parameters: 
+       *  - (Empty): boolean
+       */
+      static isShowServerInfo(): boolean;
+      /**
+       * @noSelf
+       *
+       * Method Parameters: 
+       *  - (boolean arg0): void
+       */
+      static setShowConnectionInfo(arg0: boolean): void;
+      /**
+       * @noSelf
+       *
+       * Method Parameters: 
+       *  - (boolean arg0): void
+       */
+      static setShowPingInfo(arg0: boolean): void;
+      /**
+       * @noSelf
+       *
+       * Method Parameters: 
+       *  - (boolean arg0): void
+       */
+      static setShowServerInfo(arg0: boolean): void;
     }
     /** [ENUM] zombie.network.NetworkVariables$PredictionTypes */
     export class NetworkVariables$PredictionTypes {
@@ -1580,7 +1695,6 @@ declare module '@asledgehammer/pipewrench' {
       static readonly CleanBurn: zombie.network.PacketTypes$PacketType;
       static readonly ClientCommand: zombie.network.PacketTypes$PacketType;
       static readonly ClimateManagerPacket: zombie.network.PacketTypes$PacketType;
-      static readonly ConnectionDetails: zombie.network.PacketTypes$PacketType;
       static readonly ConstructedZone: zombie.network.PacketTypes$PacketType;
       static readonly Disinfect: zombie.network.PacketTypes$PacketType;
       static readonly Drink: zombie.network.PacketTypes$PacketType;
@@ -1693,7 +1807,6 @@ declare module '@asledgehammer/pipewrench' {
       static readonly StartRain: zombie.network.PacketTypes$PacketType;
       static readonly Statistic: zombie.network.PacketTypes$PacketType;
       static readonly StatisticRequest: zombie.network.PacketTypes$PacketType;
-      static readonly SteamGeneric: zombie.network.PacketTypes$PacketType;
       static readonly Stitch: zombie.network.PacketTypes$PacketType;
       static readonly StopFire: zombie.network.PacketTypes$PacketType;
       static readonly StopPause: zombie.network.PacketTypes$PacketType;
@@ -1738,6 +1851,7 @@ declare module '@asledgehammer/pipewrench' {
       static readonly WaveSignal: zombie.network.PacketTypes$PacketType;
       static readonly WeaponHit: zombie.network.PacketTypes$PacketType;
       static readonly Weather: zombie.network.PacketTypes$PacketType;
+      static readonly WorldMapPlayerPosition: zombie.network.PacketTypes$PacketType;
       static readonly WorldMessage: zombie.network.PacketTypes$PacketType;
       static readonly WorldSound: zombie.network.PacketTypes$PacketType;
       static readonly WoundInfection: zombie.network.PacketTypes$PacketType;
@@ -1930,6 +2044,11 @@ declare module '@asledgehammer/pipewrench' {
       getSteamId(): string;
       /**
        * Method Parameters: 
+       *  - (Empty): boolean
+       */
+      getUseSteamRelay(): boolean;
+      /**
+       * Method Parameters: 
        *  - (Empty): string
        */
       getUserName(): string;
@@ -2043,6 +2162,11 @@ declare module '@asledgehammer/pipewrench' {
        *  - (String arg0): void
        */
       setSteamId(arg0: string): void;
+      /**
+       * Method Parameters: 
+       *  - (boolean arg0): void
+       */
+      setUseSteamRelay(arg0: boolean): void;
       /**
        * Method Parameters: 
        *  - (String arg0): void
@@ -2841,9 +2965,9 @@ declare module '@asledgehammer/pipewrench' {
     export class Userlog {
       /**
        * Constructors: 
-       *  - (String arg0, String arg1, String arg2, String arg3, int arg4)
+       *  - (String arg0, String arg1, String arg2, String arg3, int arg4, String arg5)
        */
-      constructor(arg0: string, arg1: string, arg2: string, arg3: string, arg4: number);
+      constructor(arg0: string, arg1: string, arg2: string, arg3: string, arg4: number, arg5: string);
       /**
        * Method Parameters: 
        *  - (Empty): number
@@ -2854,6 +2978,11 @@ declare module '@asledgehammer/pipewrench' {
        *  - (Empty): string
        */
       getIssuedBy(): string;
+      /**
+       * Method Parameters: 
+       *  - (Empty): string
+       */
+      getLastUpdate(): string;
       /**
        * Method Parameters: 
        *  - (Empty): string
@@ -2883,6 +3012,7 @@ declare module '@asledgehammer/pipewrench' {
       static readonly DupeItem: zombie.network.Userlog$UserlogType;
       static readonly Kicked: zombie.network.Userlog$UserlogType;
       static readonly LuaChecksum: zombie.network.Userlog$UserlogType;
+      static readonly SuspiciousActivity: zombie.network.Userlog$UserlogType;
       static readonly UnauthorizedPacket: zombie.network.Userlog$UserlogType;
       static readonly WarningPoint: zombie.network.Userlog$UserlogType;
       name(): string;

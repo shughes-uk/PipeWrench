@@ -271,8 +271,6 @@ declare module '@asledgehammer/pipewrench' {
   export class ChatTab extends zombie.chat.ChatTab {}
   /** @customConstructor ChatType.new */
   export class ChatType extends zombie.network.chat.ChatType {}
-  /** @customConstructor CheckState.new */
-  export class CheckState extends zombie.core.raknet.UdpConnection$CheckState {}
   /** @customConstructor Checks.new */
   export class Checks extends zombie.debug.DebugOptions$Checks {}
   /** @customConstructor ChecksumState.new */
@@ -359,6 +357,8 @@ declare module '@asledgehammer/pipewrench' {
   export class ConfigOption extends zombie.config.ConfigOption {}
   /** @customConstructor ConnectToServerState.new */
   export class ConnectToServerState extends zombie.gameStates.ConnectToServerState {}
+  /** @customConstructor ConnectionType.new */
+  export class ConnectionType extends zombie.core.raknet.UdpConnection$ConnectionType {}
   /** @customConstructor Container.new */
   export class Container extends zombie.scripting.objects.VehicleScript$Container {}
   /** @customConstructor ContainerOverlays.new */
@@ -654,6 +654,10 @@ declare module '@asledgehammer/pipewrench' {
   export class IPathfinder extends zombie.vehicles.PolygonalMap2$IPathfinder {}
   /** @customConstructor IPooledObject.new */
   export class IPooledObject extends zombie.util.IPooledObject {}
+  /** @customConstructor IReplace.new */
+  export class IReplace extends zombie.text.templating.IReplace {}
+  /** @customConstructor IReplaceProvider.new */
+  export class IReplaceProvider extends zombie.text.templating.IReplaceProvider {}
   /** @customConstructor IShaderProgramListener.new */
   export class IShaderProgramListener extends zombie.core.opengl.IShaderProgramListener {}
   /** @customConstructor IStatePermissions.new */
@@ -1414,6 +1418,10 @@ declare module '@asledgehammer/pipewrench' {
   export class RenderEffectType extends zombie.iso.objects.RenderEffectType {}
   /** @customConstructor RenderSettings.new */
   export class RenderSettings extends zombie.core.opengl.RenderSettings {}
+  /** @customConstructor ReplaceProviderCharacter.new */
+  export class ReplaceProviderCharacter extends zombie.text.templating.ReplaceProviderCharacter {}
+  /** @customConstructor RequestState.new */
+  export class RequestState extends zombie.network.GameClient$RequestState {}
   /** @customConstructor RequiredSkill.new */
   export class RequiredSkill extends zombie.scripting.objects.Recipe$RequiredSkill {}
   /** @customConstructor Result.new */
@@ -1605,8 +1613,12 @@ declare module '@asledgehammer/pipewrench' {
   export class SystemDisabler extends zombie.SystemDisabler {}
   /** @customConstructor Temperature.new */
   export class Temperature extends zombie.iso.weather.Temperature {}
+  /** @customConstructor TemplateText.new */
+  export class TemplateText extends zombie.text.templating.TemplateText {}
   /** @customConstructor TentAmbianceLogic.new */
   export class TentAmbianceLogic extends zombie.audio.ObjectAmbientEmitters$TentAmbianceLogic {}
+  /** @customConstructor TermsOfServiceState.new */
+  export class TermsOfServiceState extends zombie.gameStates.TermsOfServiceState {}
   /** @customConstructor TestResults.new */
   export class TestResults extends zombie.iso.LosUtil$TestResults {}
   /** @customConstructor TextDrawHorizontal.new */
@@ -1890,12 +1902,6 @@ declare module '@asledgehammer/pipewrench' {
   export class XPMultiplier extends zombie.characters.IsoGameCharacter$XPMultiplier {}
   /** @customConstructor ZLogger.new */
   export class ZLogger extends zombie.core.logger.ZLogger {}
-  /** @customConstructor ZNetFileAnnounce.new */
-  export class ZNetFileAnnounce extends zombie.core.znet.ZNetFileAnnounce {}
-  /** @customConstructor ZNetFileChunk.new */
-  export class ZNetFileChunk extends zombie.core.znet.ZNetFileChunk {}
-  /** @customConstructor ZNetSessionState.new */
-  export class ZNetSessionState extends zombie.core.znet.ZNetSessionState {}
   /** @customConstructor ZNetStatistics.new */
   export class ZNetStatistics extends zombie.core.znet.ZNetStatistics {}
   /** @customConstructor ZombieConfig.new */
@@ -2391,6 +2397,13 @@ declare module '@asledgehammer/pipewrench' {
    * @noSelf
    *
    * Method Parameters:
+   *  - (UdpConnection arg0): void
+   */
+  export function checkModsNeedUpdate(arg0: zombie.core.raknet.UdpConnection): void;
+  /**
+   * @noSelf
+   *
+   * Method Parameters:
    *  - (String arg0): boolean
    */
   export function checkPlayerCanUseChat(arg0: string): boolean;
@@ -2443,6 +2456,13 @@ declare module '@asledgehammer/pipewrench' {
    *  - (String arg0): void
    */
   export function connectToServerStateCallback(arg0: string): void;
+  /**
+   * @noSelf
+   *
+   * Method Parameters:
+   *  - (String arg0, String arg1): void
+   */
+  export function connectionManagerLog(arg0: string, arg1: string): void;
   /**
    * @noSelf
    *
@@ -3208,6 +3228,13 @@ declare module '@asledgehammer/pipewrench' {
    * @noSelf
    *
    * Method Parameters:
+   *  - (Empty): string
+   */
+  export function getGameVersion(): string;
+  /**
+   * @noSelf
+   *
+   * Method Parameters:
    *  - (Empty): number
    */
   export function getGametimeTimestamp(): number;
@@ -3449,6 +3476,13 @@ declare module '@asledgehammer/pipewrench' {
    *  - (Empty): java.util.ArrayList<string>
    */
   export function getLuaDebuggerErrors(): java.util.ArrayList<string>;
+  /**
+   * @noSelf
+   *
+   * Method Parameters:
+   *  - (Empty): se.krka.kahlua.vm.KahluaTable
+   */
+  export function getMPStatus(): se.krka.kahlua.vm.KahluaTable;
   /**
    * @noSelf
    *
@@ -3833,6 +3867,13 @@ declare module '@asledgehammer/pipewrench' {
    * @noSelf
    *
    * Method Parameters:
+   *  - (Empty): string
+   */
+  export function getServerIP(): string;
+  /**
+   * @noSelf
+   *
+   * Method Parameters:
    *  - (Empty): se.krka.kahlua.vm.KahluaTable
    */
   export function getServerList(): se.krka.kahlua.vm.KahluaTable;
@@ -3871,6 +3912,13 @@ declare module '@asledgehammer/pipewrench' {
    *  - (Empty): string
    */
   export function getServerPasswordFromArgs(): string;
+  /**
+   * @noSelf
+   *
+   * Method Parameters:
+   *  - (Empty): string
+   */
+  export function getServerPort(): string;
   /**
    * @noSelf
    *
@@ -4096,13 +4144,6 @@ declare module '@asledgehammer/pipewrench' {
    *  - (String arg0): void
    */
   export function getTickets(arg0: string): void;
-  /**
-   * @noSelf
-   *
-   * Method Parameters:
-   *  - (Empty): se.krka.kahlua.vm.KahluaTable
-   */
-  export function getMPStatus(): se.krka.kahlua.vm.KahluaTable;
   /**
    * @noSelf
    *
@@ -4514,6 +4555,27 @@ declare module '@asledgehammer/pipewrench' {
    *  - (Empty): boolean
    */
   export function isShiftKeyDown(): boolean;
+  /**
+   * @noSelf
+   *
+   * Method Parameters:
+   *  - (Empty): boolean
+   */
+  export function isShowConnectionInfo(): boolean;
+  /**
+   * @noSelf
+   *
+   * Method Parameters:
+   *  - (Empty): boolean
+   */
+  export function isShowPingInfo(): boolean;
+  /**
+   * @noSelf
+   *
+   * Method Parameters:
+   *  - (Empty): boolean
+   */
+  export function isShowServerInfo(): boolean;
   /**
    * @noSelf
    *
@@ -5222,7 +5284,7 @@ declare module '@asledgehammer/pipewrench' {
    * @noSelf
    *
    * Method Parameters:
-   *  - (String arg0, String arg1, String arg2, String arg3, String arg4, String arg5): void
+   *  - (String arg0, String arg1, String arg2, String arg3, String arg4, String arg5, String arg6, boolean arg7): void
    */
   export function serverConnect(
     arg0: string,
@@ -5230,7 +5292,9 @@ declare module '@asledgehammer/pipewrench' {
     arg2: string,
     arg3: string,
     arg4: string,
-    arg5: string
+    arg5: string,
+    arg6: string,
+    arg7: boolean
   ): void;
   /**
    * @noSelf
@@ -5364,7 +5428,28 @@ declare module '@asledgehammer/pipewrench' {
    * Method Parameters:
    *  - (boolean arg0): void
    */
+  export function setShowConnectionInfo(arg0: boolean): void;
+  /**
+   * @noSelf
+   *
+   * Method Parameters:
+   *  - (boolean arg0): void
+   */
   export function setShowPausedMessage(arg0: boolean): void;
+  /**
+   * @noSelf
+   *
+   * Method Parameters:
+   *  - (boolean arg0): void
+   */
+  export function setShowPingInfo(arg0: boolean): void;
+  /**
+   * @noSelf
+   *
+   * Method Parameters:
+   *  - (boolean arg0): void
+   */
+  export function setShowServerInfo(arg0: boolean): void;
   /**
    * @noSelf
    *
@@ -6993,6 +7078,10 @@ declare module '@asledgehammer/pipewrench' {
   /** @customConstructor ISTabPanel:new */
   export class ISTabPanel extends lua.client.ISUI.ISTabPanel {}
 
+  // [lua/client/ISUI/ISTermsOfServiceUI.d.ts]
+  /** @customConstructor ISTermsOfServiceUI:new */
+  export class ISTermsOfServiceUI extends lua.client.ISUI.ISTermsOfServiceUI {}
+
   // [lua/client/ISUI/ISTextBox.d.ts]
   /** @customConstructor ISTextBox:new */
   export class ISTextBox extends lua.client.ISUI.ISTextBox {}
@@ -8455,6 +8544,9 @@ declare module '@asledgehammer/pipewrench' {
   // [lua/client/Vehicles/ISUI/ISVehicleSeatUI.d.ts]
   /** @customConstructor ISVehicleSeatUI:new */
   export class ISVehicleSeatUI extends lua.client.Vehicles.ISUI.ISVehicleSeatUI {}
+  export abstract class ImageScale extends lua.client.Vehicles.ISUI.ImageScale {}
+  export abstract class SeatOffsetX extends lua.client.Vehicles.ISUI.SeatOffsetX {}
+  export abstract class SeatOffsetY extends lua.client.Vehicles.ISUI.SeatOffsetY {}
 
   // [lua/client/Vehicles/ISVehicleTrailerUtils.d.ts]
   export abstract class ISVehicleTrailerUtils extends lua.client.Vehicles.ISVehicleTrailerUtils {}

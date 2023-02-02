@@ -2195,6 +2195,11 @@ declare module '@asledgehammer/pipewrench' {
        * Method Parameters: 
        *  - (Empty): boolean
        */
+      isAllowRottenItem(): boolean;
+      /**
+       * Method Parameters: 
+       *  - (Empty): boolean
+       */
       isCanBeDoneFromFloor(): boolean;
       /**
        * Method Parameters: 
@@ -2206,6 +2211,11 @@ declare module '@asledgehammer/pipewrench' {
        *  - (Empty): boolean
        */
       isHidden(): boolean;
+      /**
+       * Method Parameters: 
+       *  - (Empty): boolean
+       */
+      isInSameInventory(): boolean;
       /**
        * Method Parameters: 
        *  - (String arg0): boolean
@@ -2251,6 +2261,11 @@ declare module '@asledgehammer/pipewrench' {
        *  - (boolean arg0): void
        */
       setAllowFrozenItem(arg0: boolean): void;
+      /**
+       * Method Parameters: 
+       *  - (boolean arg0): void
+       */
+      setAllowRottenItem(arg0: boolean): void;
       /**
        * Method Parameters: 
        *  - (String arg0): void
@@ -2582,6 +2597,11 @@ declare module '@asledgehammer/pipewrench' {
        * Method Parameters: 
        *  - (Empty): boolean
        */
+      isAllowRottenItem(): boolean;
+      /**
+       * Method Parameters: 
+       *  - (Empty): boolean
+       */
       isCanBeDoneFromFloor(): boolean;
       /**
        * Method Parameters: 
@@ -2593,6 +2613,11 @@ declare module '@asledgehammer/pipewrench' {
        *  - (Empty): boolean
        */
       isHidden(): boolean;
+      /**
+       * Method Parameters: 
+       *  - (Empty): boolean
+       */
+      isInSameInventory(): boolean;
       /**
        * Method Parameters: 
        *  - (String arg0): boolean
@@ -2633,6 +2658,11 @@ declare module '@asledgehammer/pipewrench' {
        *  - (boolean arg0): void
        */
       setAllowFrozenItem(arg0: boolean): void;
+      /**
+       * Method Parameters: 
+       *  - (boolean arg0): void
+       */
+      setAllowRottenItem(arg0: boolean): void;
       /**
        * Method Parameters: 
        *  - (String arg0): void
@@ -2927,6 +2957,11 @@ declare module '@asledgehammer/pipewrench' {
        *  - (String arg0): zombie.scripting.objects.Recipe
        */
       getRecipe(arg0: string): zombie.scripting.objects.Recipe;
+      /**
+       * Method Parameters: 
+       *  - (String arg0): zombie.scripting.objects.Item
+       */
+      getSpecificItem(arg0: string): zombie.scripting.objects.Item;
       /**
        * Method Parameters: 
        *  - (String arg0): zombie.scripting.objects.VehicleScript
