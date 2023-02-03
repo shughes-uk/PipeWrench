@@ -668,8 +668,9 @@ declare module '@asledgehammer/pipewrench' {
       /**
        * Method Parameters: 
        *  - (Empty): void
+       *  - (int arg0): void
        */
-      update(): void;
+      update(arg0?: number): void;
     }
     /**
      * @customConstructor Clock.new
@@ -11112,6 +11113,13 @@ declare module '@asledgehammer/pipewrench' {
        *  - (UIElement arg0): void
        */
       static RemoveElement(arg0: zombie.ui.UIElement): void;
+      /**
+       * @noSelf
+       *
+       * Method Parameters: 
+       *  - (Empty): void
+       */
+      static clearArrays(): void;
       /**
        * @noSelf
        *

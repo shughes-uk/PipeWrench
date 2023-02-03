@@ -3497,6 +3497,8 @@ declare module '@asledgehammer/pipewrench' {
       /** boolean */
       static doEnableDetectOpenGLErrorsInTexture: boolean;
       /** boolean */
+      static doKickInDebug: boolean;
+      /** boolean */
       static doObjectStateSyncEnable: boolean;
       /** boolean */
       static doOverridePOVCharacters: boolean;
@@ -3793,6 +3795,12 @@ declare module '@asledgehammer/pipewrench' {
        *  - (int arg0, int arg1, int arg2, boolean arg3, IsoZombie arg4): zombie.WorldSoundManager$ResultBiggestSound
        */
       getBiggestSoundZomb(arg0: number, arg1: number, arg2: number, arg3: boolean, arg4: zombie.characters.IsoZombie): zombie.WorldSoundManager$ResultBiggestSound;
+      /**
+       * Method Parameters: 
+       *  - (int arg0): number
+       *  - (IsoZombie arg0): number
+       */
+      getHearingMultiplier(arg0: number | zombie.characters.IsoZombie): number;
       /**
        * Method Parameters: 
        *  - (Empty): zombie.WorldSoundManager$WorldSound
